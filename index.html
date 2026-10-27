@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edeae3">
+  <meta name="description" content="JK/01 — Justin's independent digital space. Explore SignalDesk, Lexora, TapNTrust and Hazelnuttunes.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JK/01 — Justin's Digital Space">
+  <meta property="og:description" content="One space. Different ideas. Explore projects by Justin / JustKing.">
+  <meta property="og:url" content="https://jk01.runs-at.dev/">
+  <meta property="og:image" content="https://jk01.runs-at.dev/og-cover.svg">
+  <link rel="canonical" href="https://jk01.runs-at.dev/">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./site-data.js"></script>
+  <script defer src="./app.js"></script>
+  <title>JK/01 — Justin's Digital Space</title>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-shell">
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="JK/01 Home">JK<span>/</span>01<span class="wordmark-star">✳</span></a>
+    <p class="header-middle"><span class="online-indicator"></span> AN INDEPENDENT DIGITAL SPACE</p>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#work">WORK <span>01</span></a>
+      <a href="#about">ABOUT <span>02</span></a>
+      <a href="#connect">CONNECT <span>03</span></a>
+    </nav>
+    <button class="menu-button" type="button" id="menuButton" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+    <a href="#work">01 — Selected work</a><a href="#about">02 — About</a><a href="#connect">03 — Connect</a>
+  </nav>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-main">
+        <div class="hero-kicker"><span class="hero-sun">✳</span> THE PERSONAL INDEX OF <span class="hero-kicker-line"></span> JUSTKING</div>
+        <h1 id="hero-title">Ideas into<br><em>something.</em><span class="hero-period">*</span></h1>
+        <div class="hero-subrow">
+          <p id="heroDescription">Independent projects, little experiments and useful things built for the real world.</p>
+          <a href="#work" class="round-arrow" aria-label="Discover projects">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h13v13M18 6 5 19"/></svg>
+          </a>
+        </div>
+        <span class="hero-footnote">SCROLL TO EXPLORE ↓</span>
+      </div>
+      <aside class="hero-profile" aria-label="Justin's profile card">
+        <div class="profile-top"><span>IDENTITY / FILE 001</span><span>✣</span></div>
+        <div class="profile-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><span class="profile-initials">JK</span><div class="profile-burst">BUILD<br>MORE<br>THINGS <span>↗</span></div></div>
+        <div class="profile-name"><div><small>AKA / JUSTKING</small><strong>Justin<span class="serif">.</span></strong></div><span class="profile-number">№ 001</span></div>
+        <div class="profile-bottom"><span id="profileLocation">MELBOURNE, AUSTRALIA</span><span>◈</span></div>
+      </aside>
+    </section>
+
+    <div class="marquee" aria-label="Independent projects"><div class="marquee-track" aria-hidden="true">
+      <span>DESIGNED WITH INTENTION</span> <b>✳</b><span>BUILT FROM CURIOSITY</span><b>✳</b><span>MADE TO BE USED</span><b>✳</b>
+      <span>DESIGNED WITH INTENTION</span><b>✳</b><span>BUILT FROM CURIOSITY</span><b>✳</b><span>MADE TO BE USED</span><b>✳</b>
+    </div></div>
+
+    <section class="work content-padding" id="work" aria-labelledby="work-title">
+      <div class="section-label"><span>[ 01 / DIRECTORY ]</span><span>PROJECTS, PRODUCTS & DIGITAL EXPERIENCES</span></div>
+      <div class="section-heading"><h2 id="work-title">Selected <em>work.</em></h2><p>One space.<br>Different worlds. <span>✳</span></p></div>
+      <div class="filter-bar" role="group" aria-label="Project categories">
+        <div class="filters">
+          <button class="filter active" data-filter="all" aria-pressed="true" type="button">ALL PROJECTS <span id="countAll">04</span></button>
+          <button class="filter" data-filter="tools" aria-pressed="false" type="button">TOOLS & TECH</button>
+          <button class="filter" data-filter="ventures" aria-pressed="false" type="button">BUSINESSES</button>
+        </div>
+        <span>SELECT ANY CARD TO OPEN ↗</span>
+      </div>
+      <div class="project-list" id="projectGrid" aria-live="polite"></div>
+      <div class="end-note"><span>✳</span><p>More ideas are taking shape.<br><small>The list never really ends.</small></p><span>— JK/01</span></div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-inner content-padding">
+        <div class="section-label"><span>[ 02 / A LITTLE ABOUT ME ]</span><span>THE PERSON BEHIND THE PROJECTS</span></div>
+        <div class="about-grid">
+          <div class="about-visual" aria-hidden="true"><span>J</span><div class="about-sticker">STILL<br>LEARNING<br>EVERY DAY ↗</div><small>FIG. 01 — MAKER IN MOTION</small></div>
+          <div class="about-copy"><h2 id="about-title">More than<br><em>a username.</em></h2><p id="aboutText">Hey, I'm Justin. I build digital products, experiment with ideas and turn curiosity into things people can actually use. JK/01 is a home for everything I'm working on.</p><div class="about-signature"><span>JUSTIN / JUSTKING</span><span>✳</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect content-padding" id="connect" aria-labelledby="connect-title">
+      <div class="section-label"><span>[ 03 / CONNECT ]</span><span>GOOD IDEAS START WITH A CONVERSATION</span></div>
+      <div class="connect-main"><h2 id="connect-title">See you <em>out there.</em><span>✳</span></h2><p>Find me and my work around the internet.</p></div>
+      <div class="contact-links"><a id="githubLink" href="https://github.com/vienvavinhcr-star" target="_blank" rel="noopener noreferrer"><span class="contact-glyph">⌘</span><span><strong>GITHUB</strong><small>CODE / EXPERIMENTS</small></span><span class="contact-arrow">↗</span></a></div>
+      <div class="share-row"><button id="shareBtn" type="button">COPY WEBSITE LINK ↗</button><span>JK01.RUNS-AT.DEV</span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div><strong>JK/01<span>®</span></strong><p>AN INTERNET HOME FOR ALL THE THINGS I BUILD.</p></div><div><span>MADE WITH CURIOSITY • <span id="currentYear">2026</span></span><a href="#top">BACK TO TOP ↑</a></div></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><div class="noscript">Enable JavaScript to view the project directory. Or visit <a href="https://github.com/vienvavinhcr-star">my GitHub</a>.</div></noscript>
+</body>
+</html>
