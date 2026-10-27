@@ -9,6 +9,12 @@
   $('#heroDescription').textContent = p.bio || '';
   $('#aboutText').textContent = p.about || '';
   $('#profileLocation').textContent = p.location || '';
+  if (p.photo) {
+    const photo = new Image();
+    photo.alt = ''; photo.className = 'profile-photo';
+    photo.addEventListener('load', () => $('#profileArt').replaceChildren(photo), { once: true });
+    photo.src = p.photo;
+  }
   $('#currentYear').textContent = String(new Date().getFullYear());
   $('#countAll').textContent = String(source.projects.length).padStart(2, '0');
   const github = validUrl(p.github);
@@ -16,7 +22,7 @@
 
   // Decorative art is self-contained SVG/CSS, designed for each app's visual identity.
   const graphics = {
-    signal: `<div class="art art-signal"><div class="signal-browser"><div class="signal-browser-head"><span>SD / TERMINAL</span><span>● LIVE MARKETS</span></div><div class="signal-grid"><div class="signal-tiny">MARKET OVERVIEW <span>NASDAQ / ASX</span></div><div class="signal-numbers">+12.48<span>%</span> <small>↑ TODAY</small></div><svg viewBox="0 0 520 130" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="signalFill" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#c8ef70" stop-opacity=".19"/><stop offset="1" stop-color="#c8ef70" stop-opacity="0"/></linearGradient></defs><path d="M0 100 L30 85 L57 102 L88 54 L114 72 L148 64 L174 91 L198 64 L229 75 L253 47 L287 63 L311 38 L349 56 L379 20 L420 38 L453 14 L484 35 L520 10 L520 130 L0 130Z" fill="url(#signalFill)"/><path d="M0 100 L30 85 L57 102 L88 54 L114 72 L148 64 L174 91 L198 64 L229 75 L253 47 L287 63 L311 38 L349 56 L379 20 L420 38 L453 14 L484 35 L520 10" stroke="#c8ef70" fill="none" stroke-width="2.6"/></svg></div><div class="signal-browser-foot"><span>WATCHLIST_01</span><span>STOCK INTELLIGENCE</span></div></div><div class="signal-orbit-dot"></div></div>`,
+    signal: `<div class="art art-signal"><div class="signal-browser"><div class="signal-browser-head"><span>SD / TERMINAL</span><span>RESEARCH / EXPLORE</span></div><div class="signal-grid"><div class="signal-tiny">MARKET STUDY <span>ILLUSTRATIVE VIEW</span></div><div class="signal-numbers">Signal<span> / </span>noise <small>RESEARCH FIRST</small></div><svg viewBox="0 0 520 130" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="signalFill" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#c8ef70" stop-opacity=".19"/><stop offset="1" stop-color="#c8ef70" stop-opacity="0"/></linearGradient></defs><path d="M0 100 L30 85 L57 102 L88 54 L114 72 L148 64 L174 91 L198 64 L229 75 L253 47 L287 63 L311 38 L349 56 L379 20 L420 38 L453 14 L484 35 L520 10 L520 130 L0 130Z" fill="url(#signalFill)"/><path d="M0 100 L30 85 L57 102 L88 54 L114 72 L148 64 L174 91 L198 64 L229 75 L253 47 L287 63 L311 38 L349 56 L379 20 L420 38 L453 14 L484 35 L520 10" stroke="#c8ef70" fill="none" stroke-width="2.6"/></svg></div><div class="signal-browser-foot"><span>WATCHLIST_01</span><span>STOCK INTELLIGENCE</span></div></div><div class="signal-orbit-dot"></div></div>`,
     lexora: `<div class="art art-lexora"><div class="lexora-circle"><span>æ</span></div><div class="lexora-example"><small>WORD / 023</small><strong>curiosity</strong><em>/ˌkjʊə.riˈɒs.ə.ti/</em><div><span>discover</span><span>remember</span><span>repeat ↗</span></div></div><div class="lexora-asterisk">✳</div><span class="lexora-edge">A → Z / INFINITE LEARNING</span></div>`,
     tap: `<div class="art art-tap"><div class="tap-ripple tap-r1"></div><div class="tap-ripple tap-r2"></div><div class="tap-ripple tap-r3"></div><div class="tap-card"><div class="tap-card-top"><strong>tap<span>n</span>trust<span class="tap-star">✳</span></strong></div><div class="tap-card-middle"><svg viewBox="0 0 70 70" aria-hidden="true"><path d="M26 21c13 4 18 14 18 28M20 31c7 2 9 6 10 15M39 16c16 6 25 19 25 36" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round"/><circle cx="14" cy="49" r="4" fill="currentColor"/></svg></div><div class="tap-card-bottom">GOOD EXPERIENCES.<br>GREAT REVIEWS. <span>↗</span></div></div><span class="tap-outline-text">TAP TO CONNECT</span></div>`,
     hazel: `<div class="art art-hazel"><div class="hazel-circle hazel-back"></div><div class="hazel-circle hazel-front"><span class="hazel-inner">h<span>✴</span></span><div class="hazel-smile">good things, online.</div></div><span class="hazel-petal petal-a">✳</span><span class="hazel-petal petal-b">✦</span><span class="hazel-petal petal-c">✷</span><div class="hazel-ticket">SUBSCRIPTIONS<br>& DIGITAL GOODIES <span>↗</span></div></div>`
@@ -30,7 +36,7 @@
       const article = make('article', `project-card theme-${project.id}`);
       const link = make('a', 'project-main');
       link.href = url || '#'; link.target = '_blank'; link.rel = 'noopener noreferrer';
-      link.setAttribute('aria-label', `Open ${project.name} website in a new tab`);
+      link.setAttribute('aria-label', `${project.status} — opens in a new tab`);
       if (!url) { link.removeAttribute('target'); link.addEventListener('click', e => e.preventDefault()); }
       const copy = make('div', 'project-copy');
       const meta = make('div', 'project-meta');
@@ -70,7 +76,7 @@
   const closeMenu = () => { mobileNav.hidden = true; menuBtn.setAttribute('aria-expanded','false'); menuBtn.setAttribute('aria-label','Open navigation'); };
   menuBtn.addEventListener('click',() => { const show = mobileNav.hidden; mobileNav.hidden = !show; menuBtn.setAttribute('aria-expanded',String(show)); menuBtn.setAttribute('aria-label',show?'Close navigation':'Open navigation'); });
   mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click',closeMenu));
-  document.addEventListener('keydown',e=>{ if(e.key==='Escape')closeMenu(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !mobileNav.hidden){ closeMenu(); menuBtn.focus(); } });
 
   const toast = $('#toast'); let toastId;
   const notify = message => { toast.textContent = message; toast.classList.add('visible'); clearTimeout(toastId); toastId=setTimeout(()=>toast.classList.remove('visible'),2600); };

@@ -7,43 +7,46 @@
 window.JK_DATA = {
   person: {
     name: "Justin",
+    // Optional local photo path, e.g. "./assets/justin.webp". Empty keeps the JK monogram.
+    photo: "",
     alias: "JustKing",
     location: "MELBOURNE, AUSTRALIA",
-    bio: "Independent projects, little experiments and useful things built for the real world.",
+    bio: "A collection of digital products, businesses, experiments and ideas I’ve brought to life.",
     about: "Hey, I'm Justin. I build digital products, experiment with ideas and turn curiosity into things people can actually use. JK/01 is a home for everything I'm working on.",
     github: "https://github.com/vienvavinhcr-star"
   },
+  // Array order determines display order.
   projects: [
     {
       id: "signaldesk", number: "01", name: "SignalDesk", group: "tools", graphic: "signal",
-      category: "FINANCE / INTELLIGENCE", status: "EXPLORE PLATFORM",
+      category: "FINTECH / MARKET INTELLIGENCE", status: "Explore SignalDesk",
       summary: "A sharper perspective on the markets.",
-      description: "A market intelligence workspace built around research, signals and the information that matters.",
+      description: "A market intelligence workspace built for deeper research and smarter market exploration.",
       url: "https://signaldesk-vestracapital.pages.dev/"
     },
     {
       id: "lexora", number: "02", name: "Lexora", group: "tools", graphic: "lexora",
-      category: "LANGUAGE / LEARNING", status: "EXPLORE APP",
+      category: "EDUCATION / LANGUAGE LEARNING", status: "Explore Lexora",
       summary: "Words worth remembering.",
-      description: "A personal space for vocabulary, discovery and smarter English learning.",
+      description: "A language-learning experience focused on vocabulary, practice and continuous improvement.",
       url: "https://lexora-pte.pages.dev/"
     },
     {
       id: "tapntrust", number: "03", name: "TapNTrust", group: "ventures", graphic: "tap",
-      category: "NFC / LOCAL BUSINESS", status: "VISIT WEBSITE",
+      category: "E-COMMERCE / NFC TECHNOLOGY", status: "Explore TapNTrust",
       summary: "A tap that builds trust.",
-      description: "NFC Google Review Cards for businesses ready to turn great service into lasting customer connections.",
+      description: "Helping businesses connect with customers through smart NFC-powered review solutions.",
       url: "https://tapntrust.com/"
     },
     {
       id: "hazelnuttunes", number: "04", name: "Hazelnuttunes", group: "ventures", graphic: "hazel",
-      category: "DIGITAL / COMMERCE", status: "VISIT THE SHOP",
+      category: "DIGITAL SERVICES / ONLINE STORE", status: "Visit Hazelnuttunes Shop",
       summary: "Your digital favourites, made simple.",
-      description: "A digital storefront for subscriptions, everyday tools and the online things you love.",
+      description: "A digital storefront for streaming and online subscription services.",
       url: "https://hazelnuttunes.com/",
       extraLinks: [
-        { label: "SUPPORT 24/7", detail: "Facebook support", url: "https://www.facebook.com/profile.php?id=61576748497882", icon: "↗" },
-        { label: "OUR FANPAGE", detail: "News & community", url: "https://www.facebook.com/profile.php?id=61591800332459", icon: "↗" }
+        { label: "Our Support 24/7", detail: "Facebook support", url: "https://www.facebook.com/profile.php?id=61576748497882", icon: "↗" },
+        { label: "Our Fanpage", detail: "News & community", url: "https://www.facebook.com/profile.php?id=61591800332459", icon: "↗" }
       ]
     }
   ]

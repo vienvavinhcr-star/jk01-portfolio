@@ -1,37 +1,32 @@
-# JK/01 — Justin's Digital Space
+# JK/01 — Justin / JustKing
 
-A responsive personal project hub for **Justin / JustKing**, hosted using free GitHub Pages and the claimed `jk01.runs-at.dev` subdomain. Built with plain HTML, CSS and JavaScript—no dependencies or build step.
+An independent personal index for Justin in Melbourne: digital products, businesses and experiments. Plain HTML, CSS and JavaScript, published from `main` / repository root using GitHub Pages.
 
-## Projects
+## Edit content
 
-| Project / link | Destination |
-| --- | --- |
-| SignalDesk | https://signaldesk-vestracapital.pages.dev/ |
-| Lexora | https://lexora-pte.pages.dev/ |
-| TapNTrust | https://tapntrust.com/ |
-| Hazelnuttunes Shop | https://hazelnuttunes.com/ |
-| Hazelnuttunes Support 24/7 | https://www.facebook.com/profile.php?id=61576748497882 |
-| Hazelnuttunes Fanpage | https://www.facebook.com/profile.php?id=61591800332459 |
+Edit `site-data.js` for profile copy, project descriptions, CTAs and URLs. The order of the `projects` array is the display order. `person.photo` accepts an optional local image path; leave it empty to retain the JK monogram. A failed photo load keeps the monogram.
 
-Each project has a bespoke theme. Main cards open their official destination in a new tab. Hazelnuttunes includes two additional Facebook links.
+- `index.html`: page structure, metadata and JavaScript-free link fallback
+- `styles.css`: editorial typography, responsive layout and four individual project themes
+- `app.js`: project rendering, filters, mobile navigation and copy-link interaction
+- `favicon.svg`: JK favicon
+- `og-cover.svg`: editable social artwork; `og-cover.jpg`: 1200 × 630 social preview
 
-## Publish to `jk01.runs-at.dev`
+External links open in new tabs with `noopener noreferrer`. The shop and its two Facebook links are sibling anchors; no parent click handler intercepts secondary links. Escape closes mobile navigation and restores focus. Reduced-motion preferences disable motion.
 
-The website source and the `CNAME` file are committed. **Repository publication does not automatically enable GitHub Pages or configure DNS.** The account owner must complete these steps:
+## Local preview
 
-1. In [repository Settings → Pages](https://github.com/vienvavinhcr-star/jk01-portfolio/settings/pages), choose **Build and deployment → Deploy from a branch**, **Branch: main**, **Folder: /(root)** and **Save**.
-2. In [runs-at.dev/manage](https://runs-at.dev/manage), open claimed name **jk01** → **Point to my hosting** → **GitHub Pages** → **Save**. DNS CNAME target: `vienvavinhcr-star.github.io` (no protocol or repository path).
-3. In **Settings → Pages** confirm **Custom domain** is `jk01.runs-at.dev` and save if required. (The `CNAME` file already exists in the root.)
-4. After GitHub's DNS check succeeds, select **Enforce HTTPS**. Visit https://jk01.runs-at.dev/ to confirm it is live.
+Run `python3 -m http.server 8000` from the repository root, then open http://localhost:8000. No package install or build step is required.
 
-Official provider guide: https://runs-at.dev/docs/guides/github-pages
+## Hosting
 
-## Edit profile and links
+Keep `.nojekyll` and the root `CNAME` containing `jk01.runs-at.dev`.
 
-Edit **`site-data.js`** to change project titles, descriptions, official URLs or the personal bio. Edit **`styles.css`** for themes, **`app.js`** for interactions, and **`index.html`** for the site layout.
+- GitHub Pages: Deploy from a branch → `main` → `/ (root)`
+- Custom domain: `jk01.runs-at.dev`
+- runs-at.dev: Point to my hosting → GitHub Pages → `vienvavinhcr-star.github.io`
+- Enable Enforce HTTPS in Pages settings after GitHub issues the certificate.
 
-## Development
+Check current service status in [Pages settings](https://github.com/vienvavinhcr-star/jk01-portfolio/settings/pages) and [domain diagnostics](https://runs-at.dev/debug/jk01). Domain claim, DNS propagation, certificate issuance and deployment are separate states.
 
-Serve the repository locally: `python3 -m http.server 8000` and browse `http://localhost:8000`.
-
-All hosting files are in the repository root. There is no package manager, build pipeline, database, analytics script or credentials stored in this repository.
+Official documentation: [GitHub custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site), [runs-at.dev GitHub Pages guide](https://runs-at.dev/docs/guides/github-pages).
