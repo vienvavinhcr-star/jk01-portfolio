@@ -101,6 +101,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 /* Small profile actions, with a full touch target. */
 .profile-name-row{display:flex;align-items:center;justify-content:center;position:relative}
 .share-button{position:absolute;left:calc(50% + 45px);width:44px;height:44px;display:grid;place-items:center;border:1px solid transparent;border-radius:50%;padding:11px;background:transparent;color:#9eb2ce;transition:background .2s,color .2s,border-color .2s}
+.email-button{left:calc(50% + 89px)}
 .share-button:hover{background:#c1d9ff0b;border-color:#c1d9ff22;color:#f1f6ff}
 .share-button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .share-button[hidden],.clock-divider[hidden],#melbourneTime[hidden]{display:none}

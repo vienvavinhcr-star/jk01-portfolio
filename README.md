@@ -12,6 +12,8 @@ The footer shows Melbourne, Australia and a live local 24-hour clock, including 
 
 ## Sharing and local time
 
+An envelope icon beside Share links to `mailto:justinpham0101@gmail.com`. It opens the visitor’s configured email app with Justin as the recipient; it does not send a message automatically.
+
 The small share button beside Justin opens the device share sheet when supported. Otherwise it copies the canonical homepage URL and shows “Link copied”. If sharing and clipboard access are unavailable, a dialog offers a selectable URL. Cancelling the share sheet does not trigger copying.
 
 The clock uses `Intl.DateTimeFormat` with `Australia/Melbourne`, updates at minute boundaries and resyncs when the tab becomes visible. No external time API is required. Time is not announced repeatedly to screen readers.
