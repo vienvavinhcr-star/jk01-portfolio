@@ -70,7 +70,11 @@
         project.extraLinks.forEach(extra => {
           const href = https(extra.url); if (!href) return;
           const secondary = external('related-link', href, `${project.name} — ${extra.label}`);
-          const icon = make('span', 'facebook-mark', 'f'); icon.setAttribute('aria-hidden', 'true');
+          const icon = make('span', extra.platform === 'instagram' ? 'instagram-mark' : 'facebook-mark');
+          icon.setAttribute('aria-hidden', 'true');
+          if (extra.platform === 'instagram') {
+            icon.innerHTML = '<svg viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="5"/><circle cx="10" cy="10" r="3.5"/><circle cx="15" cy="5" r="1" fill="currentColor" stroke="none"/></svg>';
+          } else { icon.textContent = 'f'; }
           const arrow = make('span', 'related-arrow', '↗'); arrow.setAttribute('aria-hidden', 'true');
           secondary.append(icon, make('span', '', extra.label), arrow); related.append(secondary);
         });

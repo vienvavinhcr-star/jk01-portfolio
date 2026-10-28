@@ -59,6 +59,17 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .art-tapntrust{color:#99eed8;opacity:.24;right:15px;transform:rotate(-15deg)}
 .art-tapntrust svg{stroke:currentColor;stroke-width:1}
 .theme-tapntrust .project-card:before{content:'';position:absolute;inset:-50% 15%;transform:rotate(35deg);background:linear-gradient(90deg,transparent,#a8f5d910,transparent);pointer-events:none}
+.theme-tapntrust.has-related{border:1px solid #6095bb80;border-radius:18px;overflow:hidden;background:#122b3b;box-shadow:0 12px 35px #031d2180}
+.theme-tapntrust.has-related .project-card{border:0;border-radius:17px 17px 0 0;box-shadow:none}
+.theme-tapntrust.has-related .project-card:hover{transform:none;box-shadow:none}
+.theme-tapntrust .shop-support{background:linear-gradient(110deg,#152c44,#122b35);border-color:#c6e8ff20}
+.theme-tapntrust .support-heading{color:#b5d7e5}
+.theme-tapntrust .related-link{background:#c4e4ff08;border-color:#b7d5ea30;color:#e1f2ff}
+.theme-tapntrust .related-link:hover{background:#c4e4ff18;border-color:#8bbdd9}
+.theme-tapntrust .related-arrow{color:#a8c6dc}
+.theme-tapntrust .facebook-mark{background:#bedcf0;color:#19344b}
+.instagram-mark{display:grid;place-items:center;width:17px;height:17px;color:#bedcf0;flex:none}
+.instagram-mark svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.5}
 .theme-hazelnuttunes{border:1px solid #bc967875;border-radius:18px;overflow:hidden;box-shadow:0 12px 35px #08091160;background:#32251f}
 .theme-hazelnuttunes .project-card{--surface:radial-gradient(ellipse at 95% 0%,#f3d9af,transparent 70%),linear-gradient(115deg,#ddb08e,#e7c59c);--edge:transparent;--color:#4a2f24;--sub:#70513d;--shadow:transparent;border:0;border-radius:17px 17px 0 0;box-shadow:none}
 .theme-hazelnuttunes .project-card:hover{transform:none;box-shadow:none}

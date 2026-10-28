@@ -23,7 +23,12 @@ window.JK_DATA = {
     {
       id: 'tapntrust', name: 'TapNTrust',
       subtitle: 'One tap. Better connections.', logo: './assets/tapntrust.png',
-      url: 'https://tapntrust.com/'
+      url: 'https://tapntrust.com/',
+      extraHeading: 'TapNTrust · Support',
+      extraLinks: [
+        { label: 'Facebook', platform: 'facebook', url: 'https://www.facebook.com/tapntrust.com.au' },
+        { label: 'Instagram', platform: 'instagram', url: 'https://www.instagram.com/tapntrust.au/' }
+      ]
     },
     {
       id: 'hazelnuttunes', name: 'Hazelnuttunes Shop',
