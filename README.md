@@ -30,10 +30,12 @@ The profile uses the user-supplied image in `assets/justin.jpg`.
 - `assets/tapntrust.png`: logo from the existing TapNTrust website
 - `assets/lexora.svg`: existing Lexora favicon
 - `assets/signaldesk.svg`: the V monogram used by Vestra Capital at the supplied SignalDesk URL
-- `favicon.svg`: JK favicon; `og-cover.svg`: social artwork source; `og-cover.jpg`: 1200 × 630 social preview
+- `favicon.svg`: JK favicon; `og-cover.svg`: social artwork source; `og-cover-v2.jpg`: current 1200 × 630 social preview with Justin’s avatar and all four project logos. `og-cover.jpg` is retained for old cached previews
 
 ## Preview and hosting
 
 Run `python3 -m http.server 8000` in the repository root, then open http://localhost:8000.
 
 GitHub Pages publishes `main` / repository root. Preserve `.nojekyll` and the root `CNAME` containing `jk01.runs-at.dev`. DNS is a CNAME to `vienvavinhcr-star.github.io`; Enforce HTTPS is enabled in Pages settings.
+
+Logo spacing is optically balanced: square marks have a little breathing room, TapNTrust uses less internal padding, and the round Hazelnuttunes logo uses the full frame. The original assets are preserved.

@@ -37,8 +37,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .project-card{--edge:#ffffff22;--shadow:#0003;--surface:#172a30;--color:#e8f5ef;--sub:#a4c7c5;position:relative;display:flex;align-items:center;gap:18px;min-height:104px;padding:21px 22px;border:1px solid var(--edge);border-radius:17px;background:var(--surface);overflow:hidden;isolation:isolate;color:var(--color);box-shadow:0 12px 30px var(--shadow),inset 0 1px 0 #ffffff17;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .project-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px var(--shadow),inset 0 1px 0 #ffffff33;border-color:var(--color)}
 .project-card:active{transform:translateY(1px);box-shadow:0 2px 0 var(--shadow)}
-.project-logo{z-index:2;flex:0 0 54px;width:54px;height:54px;position:relative;display:grid;place-items:center;border-radius:11px;background:#ffffff09;overflow:hidden}
-.project-logo img{display:block;width:100%;height:100%;object-fit:contain;position:absolute;inset:0;z-index:1;background:var(--surface)}
+.project-logo{z-index:2;flex:0 0 54px;width:54px;height:54px;position:relative;display:grid;place-items:center;border-radius:11px;background:transparent;overflow:hidden}
+.project-logo img{display:block;width:90%;height:90%;object-fit:contain;position:absolute;inset:5%;z-index:1;background:var(--surface)}
 .logo-fallback{font-size:22px;font-weight:600}.project-label{min-width:0;flex:1;position:relative;z-index:2}
 .project-label h2{font-size:16px;font-weight:500;line-height:1.5;letter-spacing:-.25px;margin:0}
 .project-subtitle{display:block;font-size:11px;font-weight:400;line-height:1.7;color:var(--sub);margin-top:2px}
@@ -57,7 +57,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .art-lexora span{font:italic 115px/1 Georgia,serif;transform:rotate(-12deg)}
 .theme-lexora .project-card:before{content:'';position:absolute;right:-15px;top:-55px;width:190px;height:190px;border:1px solid #5b804338;border-radius:50%;box-shadow:0 0 0 16px #d8f48b1a,0 0 0 17px #5b804328;transform:rotate(-20deg)}
 .theme-tapntrust .project-card{--surface:radial-gradient(ellipse at 100% 0,#3371aa66,transparent 65%),linear-gradient(115deg,#162c53,#16465a);--edge:#6095bb;--color:#e4fff4;--sub:#a7d7c8;--shadow:#031d2180}
-.theme-tapntrust .project-logo img{padding:7px;background:#e8f6ed;border-radius:11px}
+.theme-tapntrust .project-logo img{inset:0;width:100%;height:100%;padding:2px;background:#e8f6ed;border-radius:11px}
 .art-tapntrust{color:#99eed8;opacity:.24;right:15px;transform:rotate(-15deg)}
 .art-tapntrust svg{stroke:currentColor;stroke-width:1}
 .theme-tapntrust .project-card:before{content:'';position:absolute;inset:-50% 15%;transform:rotate(35deg);background:linear-gradient(90deg,transparent,#a8f5d910,transparent);pointer-events:none}
@@ -76,7 +76,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .theme-hazelnuttunes .project-card{--surface:radial-gradient(ellipse at 95% 0%,#f3d9af,transparent 70%),linear-gradient(115deg,#ddb08e,#e7c59c);--edge:transparent;--color:#4a2f24;--sub:#70513d;--shadow:transparent;border:0;border-radius:17px 17px 0 0;box-shadow:none}
 .theme-hazelnuttunes .project-card:hover{transform:none;box-shadow:none}
 .theme-hazelnuttunes .project-logo,.theme-hazelnuttunes .project-logo img{border-radius:50%}
-.theme-hazelnuttunes .project-logo img{background:transparent}
+.theme-hazelnuttunes .project-logo img{inset:0;width:100%;height:100%;background:transparent}
 .art-hazelnuttunes{color:#9c6b36;opacity:.22;width:39%;right:13px}
 .art-hazelnuttunes svg{stroke:currentColor;stroke-width:1.3}
 .shop-support{padding:14px 17px 16px;background:linear-gradient(110deg,#35271f,#29211e);border-top:1px solid #fde3c01c}
