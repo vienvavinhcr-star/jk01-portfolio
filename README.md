@@ -8,7 +8,13 @@ A compact personal link page with Poppins typography, four individually illustra
 
 Hazelnuttunes' two Facebook links are grouped inside its warm brown shop panel, below a shop-specific support label. They remain separate anchors outside the main shop link. All external links open in a new tab with `noopener noreferrer`. TapNTrust has its own blue support section with Facebook and Instagram links. A JavaScript-free fallback contains all eight destinations.
 
-The footer shows only Melbourne, Australia. The avatar has a blue halo with a 3.6-second breathing cycle. It stops for reduced-motion preferences and pause while the tab is hidden.
+The footer shows Melbourne, Australia and a live local 24-hour clock, including its current AEST/AEDT timezone. The avatar has a blue halo with a 3.6-second breathing cycle. It stops for reduced-motion preferences and pause while the tab is hidden.
+
+## Sharing and local time
+
+The small share button beside Justin opens the device share sheet when supported. Otherwise it copies the canonical homepage URL and shows “Link copied”. If sharing and clipboard access are unavailable, a dialog offers a selectable URL. Cancelling the share sheet does not trigger copying.
+
+The clock uses `Intl.DateTimeFormat` with `Australia/Melbourne`, updates at minute boundaries and resyncs when the tab becomes visible. No external time API is required. Time is not announced repeatedly to screen readers.
 
 ## Motion and accessibility
 

@@ -82,6 +82,66 @@
     });
   }
 
+  // Share the canonical address, without query strings used for deployment checks.
+  const shareButton = document.querySelector('#shareButton');
+  const shareStatus = document.querySelector('#shareStatus');
+  const shareUrl = 'https://jk01.runs-at.dev/';
+  let statusTimer;
+  const notify = message => {
+    clearTimeout(statusTimer);
+    shareStatus.textContent = message;
+    shareStatus.classList.add('visible');
+    statusTimer = setTimeout(() => shareStatus.classList.remove('visible'), 2800);
+  };
+  shareButton.hidden = false;
+  let sharing = false;
+  shareButton.addEventListener('click', async () => {
+    if (sharing) return;
+    sharing = true;
+    try {
+      if (typeof navigator.share === 'function') {
+        try {
+          await navigator.share({ title: 'JK/01 — Justin', url: shareUrl });
+          return;
+        } catch (error) {
+          if (error.name === 'AbortError') return; // Cancelling never copies or sends anything.
+        }
+      }
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        notify('Link copied');
+      } catch {
+        const dialog = document.querySelector('#shareDialog');
+        const input = document.querySelector('#shareUrl');
+        dialog.showModal();
+        input.focus(); input.select();
+      }
+    } finally { sharing = false; }
+  });
+
+  // IANA timezone handles Melbourne daylight saving, regardless of the visitor’s zone.
+  const clock = document.querySelector('#melbourneTime');
+  const divider = document.querySelector('#clockDivider');
+  const clockFormat = new Intl.DateTimeFormat('en-AU', {
+    timeZone: 'Australia/Melbourne', hour: '2-digit', minute: '2-digit',
+    hourCycle: 'h23', timeZoneName: 'short'
+  });
+  let clockTimer;
+  const updateClock = () => {
+    const now = new Date();
+    clock.textContent = clockFormat.format(now);
+    clock.dateTime = now.toISOString();
+    clock.hidden = false; divider.hidden = false;
+    clock.setAttribute('aria-label', `Melbourne local time: ${clock.textContent}`);
+    clearTimeout(clockTimer);
+    if (!document.hidden) clockTimer = setTimeout(updateClock, 60000 - Date.now() % 60000);
+  };
+  document.addEventListener('visibilitychange', () => {
+    clearTimeout(clockTimer);
+    if (!document.hidden) updateClock();
+  });
+  updateClock();
+
   // Deterministic, lightweight CSS stars. No canvas, video or animation library.
   let seed = 101;
   const random = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };

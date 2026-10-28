@@ -93,3 +93,22 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 @media(max-width:600px){.link-page{width:calc(100% - 36px);padding-top:48px}.profile{margin-bottom:27px}.avatar{width:88px;height:88px;margin-bottom:17px}.profile h1{font-size:22px}.project-card{gap:14px;min-height:98px;padding:19px 17px;border-radius:15px}.project-logo{width:49px;height:49px;flex-basis:49px}.project-label h2{font-size:15px}.project-subtitle{font-size:10px}.card-arrow{margin-left:1px;font-size:18px}.related-links{gap:9px}.related-link{font-size:10px;gap:7px;padding-inline:10px}.shop-support{padding:13px 13px 14px}.support-heading{font-size:9px;letter-spacing:.035em}.footer{margin-top:24px}}
 @media(max-width:350px){.link-page{width:calc(100% - 28px)}.project-card{gap:11px;padding-inline:14px}.project-label h2{font-size:13px}.project-subtitle{font-size:9px}.project-logo{width:45px;height:45px;flex-basis:45px}.related-link{font-size:9px;padding-inline:8px;gap:6px}.related-arrow{font-size:12px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.meteor{display:none}}
+
+/* Small profile actions, with a full touch target. */
+.profile-name-row{display:flex;align-items:center;justify-content:center;position:relative}
+.share-button{position:absolute;left:calc(50% + 45px);width:44px;height:44px;display:grid;place-items:center;border:1px solid transparent;border-radius:50%;padding:11px;background:transparent;color:#9eb2ce;transition:background .2s,color .2s,border-color .2s}
+.share-button:hover{background:#c1d9ff0b;border-color:#c1d9ff22;color:#f1f6ff}
+.share-button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.share-button[hidden],.clock-divider[hidden],#melbourneTime[hidden]{display:none}
+#melbourneTime{font-variant-numeric:tabular-nums;white-space:nowrap;color:#b4c3d8}
+.clock-divider{color:#6f819d}
+.share-toast{position:fixed;z-index:10;left:50%;bottom:24px;transform:translate(-50%,8px);padding:10px 17px;border:1px solid #879eb54d;border-radius:24px;background:#18283e;color:#e5efff;font-size:12px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;white-space:nowrap;box-shadow:0 8px 25px #0004}
+.share-toast.visible{opacity:1;transform:translate(-50%,0)}
+.share-dialog{width:min(340px,calc(100% - 40px));padding:24px;border:1px solid #7d9abb66;border-radius:16px;background:#142238;color:#e8f0ff;box-shadow:0 16px 60px #0007}
+.share-dialog::backdrop{background:#040b17bb}
+.share-dialog h2{font-size:16px;margin:0 0 18px;font-weight:500}
+.share-dialog label{font-size:11px;display:block;margin-bottom:7px;color:#b7c5dc}
+.share-dialog input{width:100%;padding:12px;border:1px solid #7d9abb55;border-radius:7px;background:#0c182a;color:#e8f0ff;font:12px var(--font)}
+.share-dialog input:focus-visible{outline:2px solid #afcaff;outline-offset:2px}
+.share-dialog form{margin-top:18px;text-align:right}
+.share-dialog button{border:1px solid #7d9abb66;border-radius:7px;padding:9px 17px;background:#243b59;color:#eef5ff;font-size:12px}

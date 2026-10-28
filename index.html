@@ -19,9 +19,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20261028-9">
-  <script defer src="./site-data.js?v=20261028-9"></script>
-  <script defer src="./app.js?v=20261028-9"></script>
+  <link rel="stylesheet" href="./styles.css?v=20261028-10">
+  <script defer src="./site-data.js?v=20261028-10"></script>
+  <script defer src="./app.js?v=20261028-10"></script>
   <title>JK/01 — Justin</title>
 </head>
 <body>
@@ -34,7 +34,10 @@
   <main class="link-page">
     <header class="profile">
       <div class="avatar" id="avatar"><img class="profile-photo" src="./assets/justin.jpg" width="96" height="96" alt="Justin’s chosen profile photo" fetchpriority="high"></div>
-      <h1 id="profileName">Justin</h1>
+      <div class="profile-name-row">
+        <h1 id="profileName">Justin</h1>
+        <button class="share-button" id="shareButton" type="button" aria-label="Share Justin’s page" title="Share this page" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M7 10H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1h-2"/></svg></button>
+      </div>
     </header>
     <section class="links" id="links" aria-label="Projects and shops">
       <div id="projectGrid"></div>
@@ -49,7 +52,14 @@
         <a href="https://www.facebook.com/profile.php?id=61591800332459" target="_blank" rel="noopener noreferrer">Hazelnuttunes fanpage ↗</a>
       </div></noscript>
     </section>
-    <footer class="footer"><span id="profileLocation">Melbourne, Australia</span></footer>
+    <footer class="footer"><span id="profileLocation">Melbourne, Australia</span><span class="clock-divider" id="clockDivider" aria-hidden="true" hidden>·</span><time id="melbourneTime" aria-label="Local time in Melbourne" hidden></time></footer>
   </main>
+  <div class="share-toast" id="shareStatus" role="status" aria-live="polite"></div>
+  <dialog class="share-dialog" id="shareDialog" aria-labelledby="shareDialogTitle">
+    <h2 id="shareDialogTitle">Share Justin’s page</h2>
+    <label for="shareUrl">Copy this link</label>
+    <input id="shareUrl" type="url" value="https://jk01.runs-at.dev/" readonly spellcheck="false">
+    <form method="dialog"><button type="submit">Done</button></form>
+  </dialog>
 </body>
 </html>
