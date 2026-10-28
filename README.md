@@ -1,32 +1,27 @@
 # JK/01 — Justin / JustKing
 
-An independent personal index for Justin in Melbourne: digital products, businesses and experiments. Plain HTML, CSS and JavaScript, published from `main` / repository root using GitHub Pages.
+A compact personal link page with Poppins typography, four individually themed shop/project cards, local logos and a CSS shooting-star sky. Static HTML, CSS and JavaScript; no build step.
 
 ## Edit content
 
-Edit `site-data.js` for profile copy, project descriptions, CTAs and URLs. The order of the `projects` array is the display order. `person.photo` accepts an optional local image path; leave it empty to retain the JK monogram. A failed photo load keeps the monogram.
+`site-data.js` is the central content configuration. Edit `person` for name, alias, short bio, location, GitHub URL and optional local portrait path. Edit project names, one-line subtitles, logo paths and HTTPS URLs in `projects`. Array order controls display order.
 
-- `index.html`: page structure, metadata and JavaScript-free link fallback
-- `styles.css`: editorial typography, responsive layout and four individual project themes
-- `app.js`: project rendering, filters, mobile navigation and copy-link interaction
-- `favicon.svg`: JK favicon
-- `og-cover.svg`: editable social artwork; `og-cover.jpg`: 1200 × 630 social preview
+Hazelnuttunes' two Facebook links are separate anchors outside the main shop link. All external links open in a new tab with `noopener noreferrer`. A JavaScript-free fallback contains all six destinations.
 
-External links open in new tabs with `noopener noreferrer`. The shop and its two Facebook links are sibling anchors; no parent click handler intercepts secondary links. Escape closes mobile navigation and restores focus. Reduced-motion preferences disable motion.
+## Motion and accessibility
 
-## Local preview
+The star field and shooting stars use CSS transforms and opacity. “Pause sky” pauses all background animations and remembers the choice for the browser session. Reduced-motion preferences stop the animation automatically. Background motion also pauses when the tab is hidden. All cards and controls support keyboard focus.
 
-Run `python3 -m http.server 8000` from the repository root, then open http://localhost:8000. No package install or build step is required.
+## Assets
 
-## Hosting
+- `assets/hazelnuttunes.png`: logo embedded in the existing Hazelnuttunes website
+- `assets/tapntrust.png`: logo from the existing TapNTrust website
+- `assets/lexora.svg`: existing Lexora favicon
+- `assets/signaldesk.svg`: the V monogram used by Vestra Capital at the supplied SignalDesk URL
+- `favicon.svg`: JK favicon; `og-cover.svg`: social artwork source; `og-cover.jpg`: 1200 × 630 social preview
 
-Keep `.nojekyll` and the root `CNAME` containing `jk01.runs-at.dev`.
+## Preview and hosting
 
-- GitHub Pages: Deploy from a branch → `main` → `/ (root)`
-- Custom domain: `jk01.runs-at.dev`
-- runs-at.dev: Point to my hosting → GitHub Pages → `vienvavinhcr-star.github.io`
-- Enable Enforce HTTPS in Pages settings after GitHub issues the certificate.
+Run `python3 -m http.server 8000` in the repository root, then open http://localhost:8000.
 
-Check current service status in [Pages settings](https://github.com/vienvavinhcr-star/jk01-portfolio/settings/pages) and [domain diagnostics](https://runs-at.dev/debug/jk01). Domain claim, DNS propagation, certificate issuance and deployment are separate states.
-
-Official documentation: [GitHub custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site), [runs-at.dev GitHub Pages guide](https://runs-at.dev/docs/guides/github-pages).
+GitHub Pages publishes `main` / repository root. Preserve `.nojekyll` and the root `CNAME` containing `jk01.runs-at.dev`. DNS is a CNAME to `vienvavinhcr-star.github.io`; Enforce HTTPS is enabled in Pages settings.

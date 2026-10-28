@@ -3,103 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#edeae3">
-  <meta name="description" content="JK/01 — Justin's independent digital space. Explore SignalDesk, Lexora, TapNTrust and Hazelnuttunes.">
+  <meta name="theme-color" content="#080d1a">
+  <meta name="description" content="Justin / JustKing — projects, shops and little experiments. Explore SignalDesk, Lexora, TapNTrust and Hazelnuttunes.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="JK/01 — Justin's Digital Space">
-  <meta property="og:description" content="Hi, I'm Justin. I build things. Explore digital products, businesses and experiments by Justin / JustKing.">
+  <meta property="og:title" content="JK/01 — Justin / JustKing">
+  <meta property="og:description" content="Projects, shops & little experiments. All in one place.">
   <meta property="og:url" content="https://jk01.runs-at.dev/">
   <meta property="og:image" content="https://jk01.runs-at.dev/og-cover.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="JK/01 — Justin / JustKing. Ideas into something.">
+  <meta property="og:image:alt" content="JK/01 — Justin / JustKing, under a sky full of possibilities.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://jk01.runs-at.dev/">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
   <script defer src="./site-data.js"></script>
   <script defer src="./app.js"></script>
-  <title>JK/01 — Justin's Digital Space</title>
+  <title>JK/01 — Justin / JustKing</title>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="page-shell">
-  <header class="site-header" id="top">
-    <a class="wordmark" href="#top" aria-label="JK/01 Home">JK<span>/</span>01<span class="wordmark-star">✳</span></a>
-    <p class="header-middle"><span class="online-indicator"></span> AN INDEPENDENT DIGITAL SPACE</p>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#work">WORK <span>01</span></a>
-      <a href="#about">ABOUT <span>02</span></a>
-      <a href="#connect">CONNECT <span>03</span></a>
-    </nav>
-    <button class="menu-button" type="button" id="menuButton" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation"><span></span><span></span></button>
-  </header>
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
-    <a href="#work">01 — Selected work</a><a href="#about">02 — About</a><a href="#connect">03 — Connect</a>
-  </nav>
-
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-main">
-        <div class="hero-kicker"><span class="hero-sun">✳</span> THE PERSONAL INDEX OF <span class="hero-kicker-line"></span> JUSTKING</div>
-        <p class="hero-intro">Hi, I’m Justin. I build things.</p>
-        <h1 id="hero-title">Ideas into<br><em>something.</em><span class="hero-period" aria-hidden="true">*</span></h1>
-        <div class="hero-subrow">
-          <p id="heroDescription">A collection of digital products, businesses, experiments and ideas I’ve brought to life.</p>
-          <a href="#work" class="round-arrow" aria-label="Discover projects">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h13v13M18 6 5 19"/></svg>
-          </a>
-        </div>
-        <div class="hero-footnote"><span>MELBOURNE, AUSTRALIA</span><a href="https://github.com/vienvavinhcr-star" target="_blank" rel="noopener noreferrer">GITHUB ↗<span class="sr-only"> (opens in a new tab)</span></a></div>
-      </div>
-      <aside class="hero-profile" aria-label="Justin's profile card">
-        <div class="profile-top"><span>IDENTITY / FILE 001</span><span>✣</span></div>
-        <div class="profile-art" id="profileArt" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><span class="profile-initials">JK</span><div class="profile-burst">BUILD<br>MORE<br>THINGS <span>↗</span></div></div>
-        <div class="profile-name"><div><small>AKA / JUSTKING</small><strong>Justin<span class="serif">.</span></strong></div><span class="profile-number">№ 001</span></div>
-        <div class="profile-bottom"><span id="profileLocation">MELBOURNE, AUSTRALIA</span><span>◈</span></div>
-      </aside>
+  <a class="skip-link" href="#links">Skip to links</a>
+  <div class="sky" aria-hidden="true">
+    <div class="sky-glow"></div><div class="stars" id="stars"></div>
+    <div class="meteor meteor-one"></div><div class="meteor meteor-two"></div><div class="meteor meteor-three"></div>
+    <div class="horizon"></div>
+  </div>
+  <main class="link-page">
+    <header class="profile">
+      <div class="avatar" id="avatar" aria-hidden="true"><span>JK<span class="avatar-slash">/</span><small>01</small></span></div>
+      <h1 id="profileName">Justin <span>/ JustKing</span></h1>
+      <p id="profileBio">Projects, shops & little experiments.</p>
+    </header>
+    <section class="links" id="links" aria-label="Projects and shops">
+      <div id="projectGrid"></div>
+      <noscript><div class="fallback-links">
+        <a href="https://signaldesk-vestracapital.pages.dev/" target="_blank" rel="noopener noreferrer">SignalDesk ↗</a>
+        <a href="https://lexora-pte.pages.dev/" target="_blank" rel="noopener noreferrer">Lexora ↗</a>
+        <a href="https://tapntrust.com/" target="_blank" rel="noopener noreferrer">TapNTrust ↗</a>
+        <a href="https://hazelnuttunes.com/" target="_blank" rel="noopener noreferrer">Hazelnuttunes Shop ↗</a>
+        <a href="https://www.facebook.com/profile.php?id=61576748497882" target="_blank" rel="noopener noreferrer">Our Support 24/7 ↗</a>
+        <a href="https://www.facebook.com/profile.php?id=61591800332459" target="_blank" rel="noopener noreferrer">Our Fanpage ↗</a>
+      </div></noscript>
     </section>
-
-    <div class="index-strip"><span>INDEPENDENT BY DESIGN.</span><span>PRODUCTS / BUSINESSES / EXPERIMENTS</span><a href="#work">EXPLORE THE INDEX ↓</a></div>
-
-    <section class="work content-padding" id="work" aria-labelledby="work-title">
-      <div class="section-label"><span>[ 01 / DIRECTORY ]</span><span>PROJECTS, PRODUCTS & DIGITAL EXPERIENCES</span></div>
-      <div class="section-heading"><h2 id="work-title">Selected <em>work.</em></h2><p>One space.<br>Different worlds. <span>✳</span></p></div>
-      <div class="filter-bar" role="group" aria-label="Project categories">
-        <div class="filters">
-          <button class="filter active" data-filter="all" aria-pressed="true" type="button">ALL PROJECTS <span id="countAll">04</span></button>
-          <button class="filter" data-filter="tools" aria-pressed="false" type="button">TOOLS & TECH</button>
-          <button class="filter" data-filter="ventures" aria-pressed="false" type="button">BUSINESSES</button>
-        </div>
-        <span>SELECT ANY CARD TO OPEN ↗</span>
-      </div>
-      <div class="project-list" id="projectGrid" aria-live="polite"></div>
-      <div class="end-note"><span>✳</span><p>More ideas are taking shape.<br><small>The list never really ends.</small></p><span>— JK/01</span></div>
-    </section>
-
-    <section class="about" id="about" aria-labelledby="about-title">
-      <div class="about-inner content-padding">
-        <div class="section-label"><span>[ 02 / A LITTLE ABOUT ME ]</span><span>THE PERSON BEHIND THE PROJECTS</span></div>
-        <div class="about-grid">
-          <div class="about-visual" aria-hidden="true"><span>J</span><div class="about-sticker">STILL<br>LEARNING<br>EVERY DAY ↗</div><small>FIG. 01 — MAKER IN MOTION</small></div>
-          <div class="about-copy"><h2 id="about-title">More than<br><em>a username.</em></h2><p id="aboutText">Hey, I'm Justin. I build digital products, experiment with ideas and turn curiosity into things people can actually use. JK/01 is a home for everything I'm working on.</p><div class="about-signature"><span>JUSTIN / JUSTKING</span><span>✳</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="connect content-padding" id="connect" aria-labelledby="connect-title">
-      <div class="section-label"><span>[ 03 / CONNECT ]</span><span>GOOD IDEAS START WITH A CONVERSATION</span></div>
-      <div class="connect-main"><h2 id="connect-title">See you <em>out there.</em><span>✳</span></h2><p>Find me and my work around the internet.</p></div>
-      <div class="contact-links"><a id="githubLink" href="https://github.com/vienvavinhcr-star" target="_blank" rel="noopener noreferrer"><span class="contact-glyph">⌘</span><span><strong>GITHUB</strong><small>CODE / EXPERIMENTS</small></span><span class="contact-arrow">↗</span></a></div>
-      <div class="share-row"><button id="shareBtn" type="button">COPY WEBSITE LINK ↗</button><span>JK01.RUNS-AT.DEV</span></div>
-    </section>
+    <footer class="footer">
+      <a id="githubLink" href="https://github.com/vienvavinhcr-star" target="_blank" rel="noopener noreferrer" aria-label="Justin on GitHub (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.55.1.75-.24.75-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.7 2.59 1.2 3.22.92.1-.72.39-1.2.7-1.48-2.48-.28-5.08-1.24-5.08-5.5 0-1.21.43-2.2 1.14-2.98-.12-.28-.5-1.41.11-2.94 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.66.12 2.94.7.78 1.13 1.77 1.13 2.98 0 4.27-2.61 5.21-5.1 5.49.4.35.75 1.02.75 2.06v3.08c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9Z"/></svg><span>GitHub</span></a>
+      <span class="footer-dot">·</span><span id="profileLocation">Melbourne, Australia</span>
+    </footer>
+    <div class="page-signature">JK/01 <span>✦</span></div>
   </main>
-  <footer class="site-footer"><div><strong>JK/01</strong><p>AN INTERNET HOME FOR ALL THE THINGS I BUILD.</p></div><div><span><a href="https://github.com/vienvavinhcr-star" target="_blank" rel="noopener noreferrer">GITHUB ↗</a> · <span id="currentYear">2026</span></span><a href="#top">BACK TO TOP ↑</a></div></footer>
-</div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<noscript><div class="noscript">Project directory: <a href="https://signaldesk-vestracapital.pages.dev/" target="_blank" rel="noopener noreferrer">SignalDesk ↗</a> · <a href="https://lexora-pte.pages.dev/" target="_blank" rel="noopener noreferrer">Lexora ↗</a> · <a href="https://tapntrust.com/" target="_blank" rel="noopener noreferrer">TapNTrust ↗</a> · <a href="https://hazelnuttunes.com/" target="_blank" rel="noopener noreferrer">Hazelnuttunes Shop ↗</a> · <a href="https://www.facebook.com/profile.php?id=61576748497882" target="_blank" rel="noopener noreferrer">Our Support 24/7 ↗</a> · <a href="https://www.facebook.com/profile.php?id=61591800332459" target="_blank" rel="noopener noreferrer">Our Fanpage ↗</a></div></noscript>
+  <button class="sky-toggle" id="skyToggle" type="button" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3v10M11 3v10"/></svg><span>Pause sky</span></button>
 </body>
 </html>
