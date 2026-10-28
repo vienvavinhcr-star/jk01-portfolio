@@ -12,7 +12,7 @@ The footer shows Melbourne, Australia and a live local 24-hour clock, including 
 
 ## Sharing and local time
 
-An envelope icon beside Share links to `mailto:justinpham0101@gmail.com`. It opens the visitor’s configured email app with Justin as the recipient; it does not send a message automatically.
+A small “Email Justin” button in the footer links to `mailto:justinpham0101@gmail.com`. It opens the visitor’s configured email app with Justin as the recipient; it does not send a message automatically.
 
 The small share button beside Justin opens the device share sheet when supported. Otherwise it copies the canonical homepage URL and shows “Link copied”. If sharing and clipboard access are unavailable, a dialog offers a selectable URL. Cancelling the share sheet does not trigger copying.
 
@@ -20,7 +20,7 @@ The clock uses `Intl.DateTimeFormat` with `Australia/Melbourne`, updates at minu
 
 ## Motion and accessibility
 
-Cards enter once on page load with a 560 ms fade/16 px rise, staggered by 90 ms. Keyboard focus immediately reveals a card. Reduced-motion preferences skip the entrance entirely. Lexora uses sage, forest green and lime to match its existing logo.
+Cards enter once on page load with a 560 ms fade/16 px rise, staggered by 90 ms. Keyboard focus immediately reveals a card. Reduced-motion preferences skip the entrance entirely. Lexora uses muted moss green with soft ivory text, keeping lime only in its existing logo.
 
 The star field and shooting stars use CSS transforms and opacity. Reduced-motion preferences stop the animation automatically. Background motion also pauses when the tab is hidden. All cards and controls support keyboard focus.
 
@@ -32,7 +32,7 @@ The profile uses the user-supplied image in `assets/justin.jpg`.
 - `assets/tapntrust.png`: logo from the existing TapNTrust website
 - `assets/lexora.svg`: existing Lexora favicon
 - `assets/signaldesk.svg`: the V monogram used by Vestra Capital at the supplied SignalDesk URL
-- `favicon.svg`: JK favicon; `og-cover.svg`: social artwork source; `og-cover-v2.jpg`: current 1200 × 630 social preview with Justin’s avatar and all four project logos. `og-cover.jpg` is retained for old cached previews
+- `favicon.svg`: JK favicon; `og-cover.svg`: social artwork source; `og-cover-v3.jpg`: current 1200 × 630 social preview with Justin’s avatar and all four project logos. `og-cover.jpg` is retained for old cached previews
 
 ## Preview and hosting
 
