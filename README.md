@@ -4,9 +4,11 @@ A compact personal link page with Poppins typography, four individually illustra
 
 ## Edit content
 
-`site-data.js` is the central content configuration. Edit `person` for name, location, GitHub URL and optional local portrait path. Edit project names, one-line subtitles, logo paths and HTTPS URLs in `projects`. Array order controls display order.
+`site-data.js` is the central content configuration. Edit `person` for name, location and optional local portrait path. Edit project names, one-line subtitles, logo paths and HTTPS URLs in `projects`. Array order controls display order.
 
 Hazelnuttunes' two Facebook links are grouped inside its warm brown shop panel, below a shop-specific support label. They remain separate anchors outside the main shop link. All external links open in a new tab with `noopener noreferrer`. TapNTrust has its own blue support section with Facebook and Instagram links. A JavaScript-free fallback contains all eight destinations.
+
+The footer shows only Melbourne, Australia. The avatar has a subtle blue halo.
 
 ## Motion and accessibility
 

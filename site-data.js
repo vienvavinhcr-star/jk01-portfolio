@@ -6,8 +6,7 @@ window.JK_DATA = {
   person: {
     name: 'Justin',
     location: 'Melbourne, Australia',
-    photo: './assets/justin.jpg', // Local profile image.
-    github: 'https://github.com/vienvavinhcr-star'
+    photo: './assets/justin.jpg' // Local profile image.
   },
   projects: [
     {

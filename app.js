@@ -22,8 +22,6 @@
     const name = document.querySelector('#profileName');
     name.replaceChildren(document.createTextNode(person.name || 'Justin'));
     document.querySelector('#profileLocation').textContent = person.location || '';
-    const github = https(person.github);
-    if (github) document.querySelector('#githubLink').href = github;
     if (person.photo) {
       const photo = new Image(); photo.alt = 'Justin’s chosen profile photo'; photo.className = 'profile-photo';
       photo.addEventListener('load', () => document.querySelector('#avatar').replaceChildren(photo), {once:true});
