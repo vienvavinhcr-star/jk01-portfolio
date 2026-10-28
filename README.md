@@ -10,6 +10,8 @@ Hazelnuttunes' two Facebook links are grouped inside its warm brown shop panel, 
 
 ## Motion and accessibility
 
+Cards enter once on page load with a 560 ms fade/16 px rise, staggered by 90 ms. Keyboard focus immediately reveals a card. Reduced-motion preferences skip the entrance entirely. Lexora uses sage, forest green and lime to match its existing logo.
+
 The star field and shooting stars use CSS transforms and opacity. Reduced-motion preferences stop the animation automatically. Background motion also pauses when the tab is hidden. All cards and controls support keyboard focus.
 
 The profile uses the user-supplied image in `assets/justin.jpg`.

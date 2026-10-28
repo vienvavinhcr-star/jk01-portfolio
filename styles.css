@@ -28,7 +28,10 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .profile h1{font-size:25px;line-height:1.4;font-weight:600;letter-spacing:-.5px;margin:0}
 
 #projectGrid{display:grid;gap:18px}
-.project-group{min-width:0}
+.project-group{min-width:0;animation:card-enter 560ms cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms) both}
+@keyframes card-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+/* Keyboard users can focus a card immediately, including during its entrance. */
+.project-group.is-revealed{animation:none}
 .project-card{--edge:#ffffff22;--shadow:#0003;--surface:#172a30;--color:#e8f5ef;--sub:#a4c7c5;position:relative;display:flex;align-items:center;gap:18px;min-height:104px;padding:21px 22px;border:1px solid var(--edge);border-radius:17px;background:var(--surface);overflow:hidden;isolation:isolate;color:var(--color);box-shadow:0 12px 30px var(--shadow),inset 0 1px 0 #ffffff17;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .project-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px var(--shadow),inset 0 1px 0 #ffffff33;border-color:var(--color)}
 .project-card:active{transform:translateY(1px);box-shadow:0 2px 0 var(--shadow)}
@@ -46,11 +49,11 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .theme-signaldesk .project-card{--surface:radial-gradient(ellipse at 95% 100%,#1a4853,transparent 65%),linear-gradient(110deg,#0d202b,#112d39);--edge:#467482;--color:#e7f8ff;--sub:#a9c8d5;--shadow:#020f1f80}
 .art-signaldesk{color:#7edccf;opacity:.65;top:15px;bottom:8px;width:40%}
 .theme-signaldesk .project-logo img{background:#101b1c;border-radius:11px}
-.theme-lexora .project-card{--surface:radial-gradient(ellipse at 95% -20%,#e3d7ff 5%,transparent 65%),linear-gradient(115deg,#f2f1ec,#dbe6f9);--edge:#e7e8ff;--color:#343658;--sub:#626781;--shadow:#1a174a3d}
+.theme-lexora .project-card{--surface:radial-gradient(ellipse at 95% -20%,#e9f5bd 5%,transparent 65%),linear-gradient(115deg,#e5edda,#bfd19f);--edge:#dbeaaf;--color:#163936;--sub:#446149;--shadow:#0f281e50}
 .theme-lexora .project-logo img{background:transparent}
-.art-lexora{display:flex;align-items:center;justify-content:flex-end;padding-right:40px;color:#7a72ab;opacity:.22}
+.art-lexora{display:flex;align-items:center;justify-content:flex-end;padding-right:40px;color:#4d773f;opacity:.23}
 .art-lexora span{font:italic 115px/1 Georgia,serif;transform:rotate(-12deg)}
-.theme-lexora .project-card:before{content:'';position:absolute;right:-15px;top:-55px;width:190px;height:190px;border:1px solid #8a83b72e;border-radius:50%;box-shadow:0 0 0 16px #dcd4f31a,0 0 0 17px #8a83b71a;transform:rotate(-20deg)}
+.theme-lexora .project-card:before{content:'';position:absolute;right:-15px;top:-55px;width:190px;height:190px;border:1px solid #5b804338;border-radius:50%;box-shadow:0 0 0 16px #d8f48b1a,0 0 0 17px #5b804328;transform:rotate(-20deg)}
 .theme-tapntrust .project-card{--surface:radial-gradient(ellipse at 100% 0,#3371aa66,transparent 65%),linear-gradient(115deg,#162c53,#16465a);--edge:#6095bb;--color:#e4fff4;--sub:#a7d7c8;--shadow:#031d2180}
 .theme-tapntrust .project-logo img{padding:7px;background:#e8f6ed;border-radius:11px}
 .art-tapntrust{color:#99eed8;opacity:.24;right:15px;transform:rotate(-15deg)}

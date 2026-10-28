@@ -30,9 +30,15 @@
       photo.src = person.photo;
     }
     const grid = document.querySelector('#projectGrid');
-    data.projects.forEach(project => {
+    // Reveal a focused card permanently so tabbing away cannot restart its entrance.
+    grid.addEventListener('focusin', event => {
+      const group = event.target.closest('.project-group');
+      if (group) group.classList.add('is-revealed');
+    });
+    data.projects.forEach((project, index) => {
       const url = https(project.url); if (!url) return;
       const group = make('article', `project-group theme-${project.id}`);
+      group.style.setProperty('--reveal-delay', `${80 + index * 90}ms`);
       const link = external('project-card', url, project.name);
       const logoWrap = make('span', 'project-logo');
       const fallback = make('span', 'logo-fallback', project.name.slice(0,1));
