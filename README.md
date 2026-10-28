@@ -10,7 +10,7 @@ Hazelnuttunes' two Facebook links are grouped inside its warm brown shop panel, 
 
 ## Motion and accessibility
 
-The star field and shooting stars use CSS transforms and opacity. “Pause sky” pauses all background animations and remembers the choice for the browser session. Reduced-motion preferences stop the animation automatically. Background motion also pauses when the tab is hidden. All cards and controls support keyboard focus.
+The star field and shooting stars use CSS transforms and opacity. Reduced-motion preferences stop the animation automatically. Background motion also pauses when the tab is hidden. All cards and controls support keyboard focus.
 
 The profile uses the user-supplied image in `assets/justin.jpg`.
 

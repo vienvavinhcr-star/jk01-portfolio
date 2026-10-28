@@ -83,22 +83,10 @@
     star.style.cssText = `left:${random()*100}%;top:${random()*100}%;--size:${i%9===0?2:1}px;--opacity:${.15+random()*.55};animation-delay:-${random()*8}s`;
     stars.append(star);
   }
-  const button = document.querySelector('#skyToggle');
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  let paused = false;
-  try { paused = sessionStorage.getItem('jk01-sky-paused') === 'true'; } catch { /* Storage may be unavailable. */ }
   const syncMotion = () => {
-    const stopped = paused || preference.matches;
-    document.body.classList.toggle('sky-paused', stopped || document.hidden);
-    button.hidden = preference.matches;
-    button.setAttribute('aria-pressed', String(stopped));
-    button.querySelector('span').textContent = stopped ? 'Play sky' : 'Pause sky';
+    document.body.classList.toggle('sky-paused', preference.matches || document.hidden);
   };
-  button.addEventListener('click', () => {
-    paused = !paused;
-    try { sessionStorage.setItem('jk01-sky-paused', String(paused)); } catch { /* Optional preference only. */ }
-    syncMotion();
-  });
   preference.addEventListener('change', syncMotion);
   document.addEventListener('visibilitychange', syncMotion);
   syncMotion();
