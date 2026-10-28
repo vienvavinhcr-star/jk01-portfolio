@@ -5,10 +5,8 @@
 window.JK_DATA = {
   person: {
     name: 'Justin',
-    alias: 'JustKing',
-    bio: 'Projects, shops & little experiments.',
     location: 'Melbourne, Australia',
-    photo: '', // Optional local portrait path; blank keeps the JK/01 avatar.
+    photo: './assets/justin.jpg', // Local profile image.
     github: 'https://github.com/vienvavinhcr-star'
   },
   projects: [
@@ -31,6 +29,7 @@ window.JK_DATA = {
       id: 'hazelnuttunes', name: 'Hazelnuttunes Shop',
       subtitle: 'Your digital favourites', logo: './assets/hazelnuttunes.png',
       url: 'https://hazelnuttunes.com/',
+      extraHeading: 'Hazelnuttunes · Support & community',
       extraLinks: [
         { label: 'Our Support 24/7', url: 'https://www.facebook.com/profile.php?id=61576748497882' },
         { label: 'Our Fanpage', url: 'https://www.facebook.com/profile.php?id=61591800332459' }

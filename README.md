@@ -1,16 +1,18 @@
-# JK/01 — Justin / JustKing
+# JK/01 — Justin
 
-A compact personal link page with Poppins typography, four individually themed shop/project cards, local logos and a CSS shooting-star sky. Static HTML, CSS and JavaScript; no build step.
+A compact personal link page with Poppins typography, four individually illustrated shop/project cards, local logos and a CSS shooting-star sky. Static HTML, CSS and JavaScript; no build step.
 
 ## Edit content
 
-`site-data.js` is the central content configuration. Edit `person` for name, alias, short bio, location, GitHub URL and optional local portrait path. Edit project names, one-line subtitles, logo paths and HTTPS URLs in `projects`. Array order controls display order.
+`site-data.js` is the central content configuration. Edit `person` for name, location, GitHub URL and optional local portrait path. Edit project names, one-line subtitles, logo paths and HTTPS URLs in `projects`. Array order controls display order.
 
-Hazelnuttunes' two Facebook links are separate anchors outside the main shop link. All external links open in a new tab with `noopener noreferrer`. A JavaScript-free fallback contains all six destinations.
+Hazelnuttunes' two Facebook links are grouped inside its warm brown shop panel, below a shop-specific support label. They remain separate anchors outside the main shop link. All external links open in a new tab with `noopener noreferrer`. A JavaScript-free fallback contains all six destinations.
 
 ## Motion and accessibility
 
 The star field and shooting stars use CSS transforms and opacity. “Pause sky” pauses all background animations and remembers the choice for the browser session. Reduced-motion preferences stop the animation automatically. Background motion also pauses when the tab is hidden. All cards and controls support keyboard focus.
+
+The profile uses the user-supplied image in `assets/justin.jpg`.
 
 ## Assets
 

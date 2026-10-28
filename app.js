@@ -21,13 +21,11 @@
     const person = data.person || {};
     const name = document.querySelector('#profileName');
     name.replaceChildren(document.createTextNode(person.name || 'Justin'));
-    name.append(make('span', '', ` / ${person.alias || 'JustKing'}`));
-    document.querySelector('#profileBio').textContent = person.bio || '';
     document.querySelector('#profileLocation').textContent = person.location || '';
     const github = https(person.github);
     if (github) document.querySelector('#githubLink').href = github;
     if (person.photo) {
-      const photo = new Image(); photo.alt = ''; photo.className = 'profile-photo';
+      const photo = new Image(); photo.alt = 'Justin’s chosen profile photo'; photo.className = 'profile-photo';
       photo.addEventListener('load', () => document.querySelector('#avatar').replaceChildren(photo), {once:true});
       photo.src = person.photo;
     }
@@ -46,17 +44,31 @@
       const label = make('span', 'project-label');
       label.append(make('h2', '', project.name), make('span', 'project-subtitle', project.subtitle));
       const arrow = make('span', 'card-arrow', '↗'); arrow.setAttribute('aria-hidden', 'true');
-      link.append(logoWrap, label, arrow); group.append(link);
+      const art = make('span', `card-art art-${project.id}`);
+      art.setAttribute('aria-hidden', 'true');
+      const graphics = {
+        signaldesk: '<svg viewBox="0 0 200 100" fill="none"><path d="M0 80 23 66 39 74 61 48 78 54 100 24 122 37 146 12 169 29 200 4" stroke="currentColor" stroke-width="1.5"/><path d="M0 98H200M0 74H200M0 50H200M0 26H200M25 0V100M75 0V100M125 0V100M175 0V100" stroke="currentColor" stroke-opacity=".15" stroke-width=".7"/></svg>',
+        lexora: '<span>æ</span>',
+        tapntrust: '<svg viewBox="0 0 160 100" fill="none"><circle cx="105" cy="55" r="25"/><circle cx="105" cy="55" r="44"/><circle cx="105" cy="55" r="64"/><circle cx="105" cy="55" r="84"/></svg>',
+        hazelnuttunes: '<svg viewBox="0 0 180 110" fill="none"><ellipse cx="130" cy="50" rx="57" ry="68" transform="rotate(35 130 50)"/><ellipse cx="130" cy="50" rx="47" ry="58" transform="rotate(35 130 50)"/><path d="m48 23 4 10 11 4-11 4-4 10-4-10-10-4 10-4z" fill="currentColor" stroke="none"/></svg>'
+      };
+      art.innerHTML = graphics[project.id] || '';
+      link.append(art, logoWrap, label, arrow); group.append(link);
       if (Array.isArray(project.extraLinks)) {
+        group.classList.add('has-related');
+        const support = make('div', 'shop-support');
+        support.setAttribute('role', 'group');
+        support.setAttribute('aria-label', `${project.name} support and community`);
+        support.append(make('p', 'support-heading', project.extraHeading || `${project.name} support`));
         const related = make('div', 'related-links');
         project.extraLinks.forEach(extra => {
           const href = https(extra.url); if (!href) return;
-          const secondary = external('related-link', href, extra.label);
+          const secondary = external('related-link', href, `${project.name} — ${extra.label}`);
           const icon = make('span', 'facebook-mark', 'f'); icon.setAttribute('aria-hidden', 'true');
           const arrow = make('span', 'related-arrow', '↗'); arrow.setAttribute('aria-hidden', 'true');
           secondary.append(icon, make('span', '', extra.label), arrow); related.append(secondary);
         });
-        group.append(related);
+        support.append(related); group.append(support);
       }
       grid.append(group);
     });
