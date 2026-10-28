@@ -39,3 +39,5 @@ Run `python3 -m http.server 8000` in the repository root, then open http://local
 GitHub Pages publishes `main` / repository root. Preserve `.nojekyll` and the root `CNAME` containing `jk01.runs-at.dev`. DNS is a CNAME to `vienvavinhcr-star.github.io`; Enforce HTTPS is enabled in Pages settings.
 
 Logo spacing is optically balanced: square marks have a little breathing room, TapNTrust uses less internal padding, and the round Hazelnuttunes logo uses the full frame. The original assets are preserved.
+
+The night theme includes a faint crescent, sparse original constellation artwork (`assets/astral-field.svg`) and slowly drifting teal/violet mist. The mist stops with reduced-motion preferences and pauses when the tab is hidden. Shop palettes and logos stay distinct.
