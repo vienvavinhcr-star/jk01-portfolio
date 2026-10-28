@@ -8,7 +8,7 @@ A compact personal link page with Poppins typography, four individually illustra
 
 Hazelnuttunes' two Facebook links are grouped inside its warm brown shop panel, below a shop-specific support label. They remain separate anchors outside the main shop link. All external links open in a new tab with `noopener noreferrer`. TapNTrust has its own blue support section with Facebook and Instagram links. A JavaScript-free fallback contains all eight destinations.
 
-The footer shows only Melbourne, Australia. The avatar has a blue halo with a 3.6-second breathing cycle and a thin highlight orbiting every 8 seconds. Both stop for reduced-motion preferences and pause while the tab is hidden.
+The footer shows only Melbourne, Australia. The avatar has a blue halo with a 3.6-second breathing cycle. It stops for reduced-motion preferences and pause while the tab is hidden.
 
 ## Motion and accessibility
 
