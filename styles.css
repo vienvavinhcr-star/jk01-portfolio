@@ -20,13 +20,15 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .meteor-two{top:8%;left:105%;animation-duration:21s;animation-delay:7s;width:240px}
 .meteor-three{top:34%;left:25%;animation-duration:23s;animation-delay:12s;width:120px}
 @keyframes shoot{0%,2%{opacity:0;transform:translate3d(0,0,0) rotate(-45deg)}3%{opacity:.85}14%{opacity:0;transform:translate3d(-85vmin,85vmin,0) rotate(-45deg)}100%{opacity:0;transform:translate3d(-85vmin,85vmin,0) rotate(-45deg)}}
-.sky-paused .meteor,.sky-paused .twinkle{animation-play-state:paused}
+.sky-paused .meteor,.sky-paused .twinkle,.sky-paused .avatar:before,.sky-paused .avatar:after{animation-play-state:paused}
 .link-page{width:min(100% - 40px,560px);margin:0 auto;padding:clamp(42px,7vh,76px) 0 28px}
 .profile{text-align:center;margin-bottom:30px}
 .avatar{position:relative;display:grid;place-items:center;width:96px;height:96px;margin:0 auto 17px;border:2px solid #b6d6ffb3;border-radius:50%;background:#131f36;box-shadow:0 0 0 7px #d3e1ff05,0 0 16px #8cc5ff26;isolation:isolate}
-.avatar:before{content:'';position:absolute;inset:-6px;border-radius:50%;z-index:-1;pointer-events:none;box-shadow:0 0 24px 7px #85baff40;opacity:.45;animation:avatar-halo 5s ease-in-out infinite alternate}
-@keyframes avatar-halo{to{opacity:.8;transform:scale(1.045)}}
-.profile-photo{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.avatar:before{content:'';position:absolute;inset:-6px;border-radius:50%;z-index:0;pointer-events:none;box-shadow:0 0 18px 4px #85baff66,0 0 38px 8px #85baff26;opacity:.28;animation:avatar-halo 1.8s ease-in-out infinite alternate}
+@keyframes avatar-halo{to{opacity:.85;transform:scale(1.1)}}
+.avatar:after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid #96cfff1c;border-top-color:#e7f5ffcc;border-right-color:#9dd7ff66;pointer-events:none;z-index:2;animation:avatar-orbit 8s linear infinite}
+@keyframes avatar-orbit{to{transform:rotate(360deg)}}
+.profile-photo{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:50%}
 .profile h1{font-size:25px;line-height:1.4;font-weight:600;letter-spacing:-.5px;margin:0}
 
 #projectGrid{display:grid;gap:18px}
