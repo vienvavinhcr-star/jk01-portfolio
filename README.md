@@ -55,3 +55,5 @@ The player loads no audio until interaction, never autoplays or loops, handles f
 The music card has no background panel, border or shadow, so it blends into the sky. The white waveform sits alongside Play. `assets/low-life-waveform.json` contains 35 frequency-band levels sampled from this exact audio at 20 Hz. Rendering follows the native audio playhead with a 100 ms attack and 320 ms release, instead of a repeating CSS animation. It freezes during pause, buffering or hidden tabs, resets at the end, and respects reduced motion. No AudioContext is required, preserving native playback in iPhone in-app browsers. Regenerate this analysis when replacing the clip.
 
 Play/Pause uses a single SVG path updated with `setAttribute`, so it does not depend on the unsupported `hidden` property on SVG elements. Playback can also be paused while the initial request is loading.
+
+The music row is centered with a 360 px maximum width and inset mobile edges. The artwork, credits, compact waveform and 44 px playback target align on one row without extending to the shop-card edges.
