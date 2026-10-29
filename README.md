@@ -44,11 +44,11 @@ Logo spacing is optically balanced: square marks have a little breathing room, T
 
 The night theme includes a faint crescent, sparse original constellation artwork (`assets/astral-field.svg`) and slowly drifting teal/violet mist. The mist stops with reduced-motion preferences and pauses when the tab is hidden. Shop palettes and logos stay distinct.
 
-## Featured music (awaiting audio)
+## Featured music
 
 A compact card below Justin’s name preserves the EVOL cover, “Low Life (feat. The Weeknd)” title and Future/The Weeknd credits. The title links to the official Spotify track. The cover in `assets/low-life.jpg` is from the track’s official Spotify oEmbed metadata.
 
-The requested excerpt starts at Future’s “Wake up” line. Do not substitute a provider-selected preview: the user explicitly chose a compact native audio player rather than an expanded YouTube embed. An authorized, already-trimmed MP3/M4A file is required. Add it under `assets/` and set `music.src` in `site-data.js` to enable the native Play/Pause button. The user requested the visual music row to be published while awaiting the file. Until a clip is supplied, Play is disabled with an “Audio coming soon” status.
+The 23-second “Wake up” excerpt is in `assets/low-life-wake-up.m4a`, extracted from the user-supplied screen recording. The initial 1.92 seconds of silence were removed, with short fades at the boundaries. AAC audio is optimized for streaming with metadata stripped; the source video is not published. `music.src` in `site-data.js` enables the native Play/Pause button. To replace the clip, supply an already-trimmed audio file under `assets/` and update that path.
 
 The player loads no audio until interaction, never autoplays or loops, handles failures, updates progress, and returns to Play when the excerpt ends. No provider iframe, external player SDK, credentials or rehosted provider preview is used.
 

@@ -9,7 +9,7 @@ window.JK_DATA = {
     photo: './assets/justin.jpg' // Local profile image.
   },
   // Add an already-trimmed, authorized audio excerpt to enable Play/Pause.
-  music: { src: '' },
+  music: { src: './assets/low-life-wake-up.m4a' },
   projects: [
     {
       id: 'signaldesk', name: 'SignalDesk',
