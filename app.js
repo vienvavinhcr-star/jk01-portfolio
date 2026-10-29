@@ -82,6 +82,60 @@
     });
   }
 
+  // Audio stays disabled until an authorized local clip is configured.
+  const audio = document.querySelector('#profileAudio');
+  const musicToggle = document.querySelector('#musicToggle');
+  const musicProgress = document.querySelector('#musicProgress');
+  const musicStatus = document.querySelector('#musicStatus');
+  const musicWaveform = document.querySelector('#musicWaveform');
+  const musicSource = data?.music?.src;
+  if (typeof musicSource === 'string' && musicSource.startsWith('./assets/')) {
+    audio.src = musicSource;
+    musicToggle.disabled = false;
+    musicProgress.hidden = false;
+    let isAudible = false;
+    const syncMusic = () => {
+      const playing = !audio.paused && !audio.ended && !audio.error;
+      musicWaveform.dataset.playing = String(isAudible && playing);
+      musicToggle.setAttribute('aria-pressed', String(playing));
+      musicToggle.setAttribute('aria-label', `${playing ? 'Pause' : 'Play'} Low Life`);
+      musicToggle.querySelector('.music-play-icon').hidden = playing;
+      musicToggle.querySelector('.music-pause-icon').hidden = !playing;
+    };
+    let starting = false;
+    musicToggle.addEventListener('click', async () => {
+      if (starting) return;
+      if (!audio.paused) { audio.pause(); return; }
+      starting = true;
+      musicStatus.textContent = '';
+      try {
+        if (audio.ended) audio.currentTime = 0;
+        await audio.play();
+      } catch {
+        musicStatus.textContent = 'Couldn’t play the music. Tap Play to try again.';
+      } finally { starting = false; syncMusic(); }
+    });
+    audio.addEventListener('play', syncMusic);
+    audio.addEventListener('playing', () => { isAudible = true; syncMusic(); });
+    for (const event of ['pause', 'waiting', 'stalled', 'ended', 'error']) {
+      audio.addEventListener(event, () => { isAudible = false; syncMusic(); });
+    }
+    audio.addEventListener('ended', () => { syncMusic(); musicProgress.value = 0; });
+    audio.addEventListener('timeupdate', () => {
+      musicProgress.value = Number.isFinite(audio.duration) && audio.duration > 0 ? audio.currentTime / audio.duration : 0;
+    });
+    audio.addEventListener('error', () => {
+      musicStatus.textContent = 'Music is unavailable right now. Please try again later.';
+      syncMusic();
+    });
+  }
+
+  if (!musicSource) {
+    musicStatus.textContent = 'Audio coming soon';
+    musicToggle.title = 'Audio clip coming soon';
+    musicToggle.setAttribute('aria-describedby', 'musicStatus');
+  }
+
   // Share the canonical address, without query strings used for deployment checks.
   const shareButton = document.querySelector('#shareButton');
   const shareStatus = document.querySelector('#shareStatus');

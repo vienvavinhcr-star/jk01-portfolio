@@ -24,9 +24,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20261029-3">
-  <script defer src="./site-data.js?v=20261029-2"></script>
-  <script defer src="./app.js?v=20261029-2"></script>
+  <link rel="stylesheet" href="./styles.css?v=20261029-music-3">
+  <script defer src="./site-data.js?v=20261029-music-3"></script>
+  <script defer src="./app.js?v=20261029-music-3"></script>
   <title>JK/01 — Justin</title>
 </head>
 <body>
@@ -43,6 +43,21 @@
         <h1 id="profileName">Justin</h1>
         <button class="share-button" id="shareButton" type="button" aria-label="Share Justin’s page" title="Share this page" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M7 10H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1h-2"/></svg></button>
       </div>
+      <div class="profile-music" role="group" aria-label="Featured song">
+        <img class="music-cover" src="./assets/low-life.jpg" width="54" height="54" alt="EVOL album cover">
+        <div class="music-info">
+          <a class="music-title" href="https://open.spotify.com/track/7EiZI6JVHllARrX9PUvAdX" target="_blank" rel="noopener noreferrer">Low Life (feat. The Weeknd)</a>
+          <p class="music-artist">Future, The Weeknd</p>
+          <progress class="music-progress" id="musicProgress" value="0" max="1" aria-label="Music playback progress" hidden></progress>
+        </div>
+        <button class="music-toggle" id="musicToggle" type="button" aria-label="Play Low Life" aria-pressed="false" disabled>
+          <svg class="music-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z"/></svg>
+          <svg class="music-pause-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M7 5h4v14H7zm6 0h4v14h-4z"/></svg>
+        </button>
+        <div class="music-waveform" id="musicWaveform" data-playing="false" aria-hidden="true"><i style="--bar-height:9px;--bar-speed:620ms;--bar-delay:-0ms"></i><i style="--bar-height:22px;--bar-speed:757ms;--bar-delay:-83ms"></i><i style="--bar-height:36px;--bar-speed:894ms;--bar-delay:-166ms"></i><i style="--bar-height:17px;--bar-speed:1031ms;--bar-delay:-249ms"></i><i style="--bar-height:10px;--bar-speed:1168ms;--bar-delay:-332ms"></i><i style="--bar-height:6px;--bar-speed:675ms;--bar-delay:-415ms"></i><i style="--bar-height:12px;--bar-speed:812ms;--bar-delay:-498ms"></i><i style="--bar-height:8px;--bar-speed:949ms;--bar-delay:-581ms"></i><i style="--bar-height:24px;--bar-speed:1086ms;--bar-delay:-664ms"></i><i style="--bar-height:11px;--bar-speed:1223ms;--bar-delay:-747ms"></i><i style="--bar-height:15px;--bar-speed:730ms;--bar-delay:-830ms"></i><i style="--bar-height:7px;--bar-speed:867ms;--bar-delay:-13ms"></i><i style="--bar-height:19px;--bar-speed:1004ms;--bar-delay:-96ms"></i><i style="--bar-height:33px;--bar-speed:1141ms;--bar-delay:-179ms"></i><i style="--bar-height:13px;--bar-speed:648ms;--bar-delay:-262ms"></i><i style="--bar-height:10px;--bar-speed:785ms;--bar-delay:-345ms"></i><i style="--bar-height:7px;--bar-speed:922ms;--bar-delay:-428ms"></i><i style="--bar-height:12px;--bar-speed:1059ms;--bar-delay:-511ms"></i><i style="--bar-height:8px;--bar-speed:1196ms;--bar-delay:-594ms"></i><i style="--bar-height:19px;--bar-speed:703ms;--bar-delay:-677ms"></i><i style="--bar-height:26px;--bar-speed:840ms;--bar-delay:-760ms"></i><i style="--bar-height:12px;--bar-speed:977ms;--bar-delay:-843ms"></i><i style="--bar-height:16px;--bar-speed:1114ms;--bar-delay:-26ms"></i><i style="--bar-height:8px;--bar-speed:621ms;--bar-delay:-109ms"></i><i style="--bar-height:10px;--bar-speed:758ms;--bar-delay:-192ms"></i><i style="--bar-height:35px;--bar-speed:895ms;--bar-delay:-275ms"></i><i style="--bar-height:17px;--bar-speed:1032ms;--bar-delay:-358ms"></i><i style="--bar-height:12px;--bar-speed:1169ms;--bar-delay:-441ms"></i><i style="--bar-height:9px;--bar-speed:676ms;--bar-delay:-524ms"></i><i style="--bar-height:14px;--bar-speed:813ms;--bar-delay:-607ms"></i><i style="--bar-height:7px;--bar-speed:950ms;--bar-delay:-690ms"></i><i style="--bar-height:20px;--bar-speed:1087ms;--bar-delay:-773ms"></i><i style="--bar-height:29px;--bar-speed:1224ms;--bar-delay:-856ms"></i><i style="--bar-height:15px;--bar-speed:731ms;--bar-delay:-39ms"></i><i style="--bar-height:9px;--bar-speed:868ms;--bar-delay:-122ms"></i></div>
+        <audio id="profileAudio" preload="none"></audio>
+      </div>
+      <p class="music-status" id="musicStatus" role="status" aria-live="polite"></p>
     </header>
     <section class="links" id="links" aria-label="Projects and shops">
       <div id="projectGrid"></div>

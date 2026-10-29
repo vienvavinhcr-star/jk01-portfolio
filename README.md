@@ -12,7 +12,7 @@ The footer shows Melbourne, Australia and a live local 24-hour clock, including 
 
 ## Sharing and local time
 
-A small “Email Justin” button in the footer links to `mailto:justinpham0101@gmail.com`. It opens the visitor’s configured email app with Justin as the recipient; it does not send a message automatically.
+A small “Email” button in the footer links to `mailto:justinpham0101@gmail.com`. It opens the visitor’s configured email app with Justin as the recipient; it does not send a message automatically.
 
 The small share button beside Justin opens the device share sheet when supported. Otherwise it copies the canonical homepage URL and shows “Link copied”. If sharing and clipboard access are unavailable, a dialog offers a selectable URL. Cancelling the share sheet does not trigger copying.
 
@@ -43,3 +43,13 @@ GitHub Pages publishes `main` / repository root. Preserve `.nojekyll` and the ro
 Logo spacing is optically balanced: square marks have a little breathing room, TapNTrust uses less internal padding, and the round Hazelnuttunes logo uses the full frame. The original assets are preserved.
 
 The night theme includes a faint crescent, sparse original constellation artwork (`assets/astral-field.svg`) and slowly drifting teal/violet mist. The mist stops with reduced-motion preferences and pauses when the tab is hidden. Shop palettes and logos stay distinct.
+
+## Featured music (awaiting audio)
+
+A compact card below Justin’s name preserves the EVOL cover, “Low Life (feat. The Weeknd)” title and Future/The Weeknd credits. The title links to the official Spotify track. The cover in `assets/low-life.jpg` is from the track’s official Spotify oEmbed metadata.
+
+The requested excerpt starts at Future’s “Wake up” line. Do not substitute a provider-selected preview: the user explicitly chose a compact native audio player rather than an expanded YouTube embed. An authorized, already-trimmed MP3/M4A file is required. Add it under `assets/` and set `music.src` in `site-data.js` to enable the native Play/Pause button. The user requested the visual music row to be published while awaiting the file. Until a clip is supplied, Play is disabled with an “Audio coming soon” status.
+
+The player loads no audio until interaction, never autoplays or loops, handles failures, updates progress, and returns to Play when the excerpt ends. No provider iframe, external player SDK, credentials or rehosted provider preview is used.
+
+The music card has no background panel, border or shadow, so it blends into the sky. A decorative white waveform alongside the Play button animates only after the native audio `playing` event. It freezes during buffering, pause, end or errors and respects reduced motion / hidden tabs. This is a decorative equalizer, not an amplitude analysis of the audio.

@@ -8,6 +8,8 @@ window.JK_DATA = {
     location: 'Melbourne, Australia',
     photo: './assets/justin.jpg' // Local profile image.
   },
+  // Add an already-trimmed, authorized audio excerpt to enable Play/Pause.
+  music: { src: '' },
   projects: [
     {
       id: 'signaldesk', name: 'SignalDesk',
