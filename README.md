@@ -52,4 +52,6 @@ The 23-second “Wake up” excerpt is in `assets/low-life-wake-up.m4a`, extract
 
 The player loads no audio until interaction, never autoplays or loops, handles failures, updates progress, and returns to Play when the excerpt ends. No provider iframe, external player SDK, credentials or rehosted provider preview is used.
 
-The music card has no background panel, border or shadow, so it blends into the sky. A decorative white waveform alongside the Play button animates only after the native audio `playing` event. It freezes during buffering, pause, end or errors and respects reduced motion / hidden tabs. This is a decorative equalizer, not an amplitude analysis of the audio.
+The music card has no background panel, border or shadow, so it blends into the sky. The white waveform sits alongside Play. `assets/low-life-waveform.json` contains 35 frequency-band levels sampled from this exact audio at 20 Hz. Rendering follows the native audio playhead with a 100 ms attack and 320 ms release, instead of a repeating CSS animation. It freezes during pause, buffering or hidden tabs, resets at the end, and respects reduced motion. No AudioContext is required, preserving native playback in iPhone in-app browsers. Regenerate this analysis when replacing the clip.
+
+Play/Pause uses a single SVG path updated with `setAttribute`, so it does not depend on the unsupported `hidden` property on SVG elements. Playback can also be paused while the initial request is loading.

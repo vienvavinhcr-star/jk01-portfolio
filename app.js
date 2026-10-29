@@ -94,25 +94,77 @@
     musicToggle.disabled = false;
     musicProgress.hidden = false;
     let isAudible = false;
+    const iconPath = document.querySelector('#musicIconPath');
+    const bars = Array.from(musicWaveform.children);
+    const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+    let envelope, envelopeRequest, waveFrame = 0, lastPaint = 0;
+    const levels = new Float32Array(bars.length).fill(.3);
+    const stopWaveform = (reset = false) => {
+      cancelAnimationFrame(waveFrame); waveFrame = 0; lastPaint = 0;
+      if (reset) bars.forEach((bar, i) => {
+        levels[i] = .3; bar.style.transform = 'scaleY(.45)'; bar.style.opacity = '.75';
+      });
+    };
+    const drawWaveform = now => {
+      waveFrame = 0;
+      if (!envelope || !isAudible || audio.paused || audio.ended || document.hidden || motionPreference.matches) return;
+      if (!lastPaint || now - lastPaint >= 32) {
+        const dt = lastPaint ? Math.min((now - lastPaint) / 1000, .1) : .033;
+        const position = Math.min(audio.currentTime * envelope.fps, envelope.frames.length - 1);
+        const index = Math.floor(position), fraction = position - index;
+        const current = envelope.frames[index], next = envelope.frames[Math.min(index + 1, envelope.frames.length - 1)];
+        bars.forEach((bar, i) => {
+          const target = (current[i] + (next[i] - current[i]) * fraction) / 255;
+          // A gentle attack and slower release follow the actual sound without jitter.
+          const tau = target > levels[i] ? .10 : .32;
+          levels[i] += (target - levels[i]) * (1 - Math.exp(-dt / tau));
+          bar.style.transform = `scaleY(${.22 + levels[i] * .78})`;
+          bar.style.opacity = String(.55 + levels[i] * .45);
+        });
+        lastPaint = now;
+      }
+      waveFrame = requestAnimationFrame(drawWaveform);
+    };
+    const startWaveform = () => {
+      if (!waveFrame && envelope && isAudible && !audio.paused && !document.hidden && !motionPreference.matches) {
+        waveFrame = requestAnimationFrame(drawWaveform);
+      }
+    };
+    const loadWaveform = () => {
+      if (envelopeRequest || typeof data.music.waveform !== 'string' || !data.music.waveform.startsWith('./assets/')) return;
+      // Precomputed frequency levels avoid routing iPhone audio through an AudioContext.
+      envelopeRequest = fetch(data.music.waveform).then(response => {
+        if (!response.ok) throw new Error('Waveform unavailable');
+        return response.json();
+      }).then(value => {
+        if (value.fps > 0 && value.bands === bars.length && Array.isArray(value.frames) && value.frames.length && value.frames.every(row => Array.isArray(row) && row.length === bars.length && row.every(Number.isFinite))) {
+          envelope = value; startWaveform();
+        }
+      }).catch(() => { /* Audio remains playable if the decorative data cannot load. */ });
+    };
+    document.addEventListener('visibilitychange', () => document.hidden ? stopWaveform() : startWaveform());
+    motionPreference.addEventListener('change', () => motionPreference.matches ? stopWaveform(true) : startWaveform());
     const syncMusic = () => {
       const playing = !audio.paused && !audio.ended && !audio.error;
       musicWaveform.dataset.playing = String(isAudible && playing);
       musicToggle.setAttribute('aria-pressed', String(playing));
       musicToggle.setAttribute('aria-label', `${playing ? 'Pause' : 'Play'} Low Life`);
-      musicToggle.querySelector('.music-play-icon').hidden = playing;
-      musicToggle.querySelector('.music-pause-icon').hidden = !playing;
+      iconPath.setAttribute('d', playing ? 'M7 5h4v14H7zm6 0h4v14h-4z' : 'm9 5 11 7-11 7z');
+      musicToggle.title = playing ? 'Pause music' : 'Play music';
+      if (isAudible && playing) startWaveform(); else stopWaveform();
     };
     let starting = false;
     musicToggle.addEventListener('click', async () => {
-      if (starting) return;
       if (!audio.paused) { audio.pause(); return; }
+      if (starting) return;
+      loadWaveform();
       starting = true;
       musicStatus.textContent = '';
       try {
         if (audio.ended) audio.currentTime = 0;
         await audio.play();
-      } catch {
-        musicStatus.textContent = 'Couldn’t play the music. Tap Play to try again.';
+      } catch (error) {
+        if (error.name !== 'AbortError') musicStatus.textContent = 'Couldn’t play the music. Tap Play to try again.';
       } finally { starting = false; syncMusic(); }
     });
     audio.addEventListener('play', syncMusic);
@@ -120,7 +172,7 @@
     for (const event of ['pause', 'waiting', 'stalled', 'ended', 'error']) {
       audio.addEventListener(event, () => { isAudible = false; syncMusic(); });
     }
-    audio.addEventListener('ended', () => { syncMusic(); musicProgress.value = 0; });
+    audio.addEventListener('ended', () => { syncMusic(); stopWaveform(true); musicProgress.value = 0; });
     audio.addEventListener('timeupdate', () => {
       musicProgress.value = Number.isFinite(audio.duration) && audio.duration > 0 ? audio.currentTime / audio.duration : 0;
     });

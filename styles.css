@@ -135,13 +135,10 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .music-toggle:hover:not(:disabled){background:#b1cbe21c;border-color:#adc5da77}
 .music-toggle:disabled{cursor:default}
 .music-toggle svg{width:21px;height:21px;fill:currentColor}
-.music-toggle svg[hidden],.music-progress[hidden]{display:none}
+.music-progress[hidden]{display:none}
 .music-progress{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .music-waveform{grid-column:3;grid-row:1;width:78px;display:flex;align-items:center;justify-content:center;gap:1px;height:38px;margin:0;color:#eaf3ff;opacity:.8}
-.music-waveform i{display:block;flex:1;min-width:1px;height:var(--bar-height);border-radius:2px;background:currentColor;transform:scaleY(.65);animation:music-wave var(--bar-speed) ease-in-out var(--bar-delay) infinite alternate;animation-play-state:paused}
-.music-waveform[data-playing="true"] i{animation-play-state:running}
-.sky-paused .music-waveform i{animation-play-state:paused}
-@keyframes music-wave{0%{transform:scaleY(.3);opacity:.55}50%{transform:scaleY(1);opacity:1}100%{transform:scaleY(.55);opacity:.75}}
+.music-waveform i{display:block;flex:1;min-width:1px;height:var(--bar-height);border-radius:2px;background:currentColor;transform:scaleY(.45);transform-origin:center;opacity:.75}
 .music-status{max-width:400px;margin:8px auto 0;font-size:10px;color:#a8b8cd}
 .music-status:empty{display:none}
 
