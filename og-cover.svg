@@ -2,10 +2,10 @@
 <defs>
 <linearGradient id="night" x2="1" y2="1"><stop stop-color="#101a30"/><stop offset="1" stop-color="#080d1a"/></linearGradient>
 <radialGradient id="halo"><stop stop-color="#86baff" stop-opacity=".2"/><stop offset="1" stop-color="#86baff" stop-opacity="0"/></radialGradient>
-<linearGradient id="signal"><stop stop-color="#0d202b"/><stop offset="1" stop-color="#1a4853"/></linearGradient>
-<linearGradient id="lexora"><stop stop-color="#23372f"/><stop offset="1" stop-color="#32443a"/></linearGradient>
-<linearGradient id="tap"><stop stop-color="#162c53"/><stop offset="1" stop-color="#16465a"/></linearGradient>
-<linearGradient id="hazel"><stop stop-color="#c29b7b"/><stop offset="1" stop-color="#d0ad88"/></linearGradient>
+<linearGradient id="signal" x2="1" y2="1"><stop stop-color="#0f383d"/><stop offset="1" stop-color="#1f464b"/></linearGradient>
+<linearGradient id="lexora" x2="1" y2="1"><stop stop-color="#233823"/><stop offset="1" stop-color="#304631"/></linearGradient>
+<linearGradient id="tap" x2="1" y2="1"><stop stop-color="#213549"/><stop offset="1" stop-color="#2e4258"/></linearGradient>
+<linearGradient id="hazel" x2="1" y2="1"><stop stop-color="#442f1a"/><stop offset="1" stop-color="#523c27"/></linearGradient>
 <clipPath id="portrait"><circle cx="255" cy="265" r="83"/></clipPath>
 <clipPath id="hazel-logo"><circle cx="602" cy="507" r="29"/></clipPath>
 </defs>
@@ -19,16 +19,16 @@
 <image href="./assets/justin-profile-v2.jpg" x="172" y="182" width="166" height="166" clip-path="url(#portrait)"/>
 <text x="255" y="413" text-anchor="middle" fill="#f0f3fa" font-size="49" font-weight="600" letter-spacing="-1">Justin</text>
 <text x="88" y="563" fill="#a1b3cc" font-size="16" letter-spacing="1.5">JK01.RUNS-AT.DEV</text>
-<rect x="520" y="130" width="592" height="94" rx="17" fill="url(#signal)" stroke="#e7f8ff" stroke-opacity=".2"/>
+<rect x="520" y="130" width="592" height="94" rx="17" fill="url(#signal)" stroke="#b6c7d8" stroke-opacity=".2"/>
 <image href="./assets/signaldesk.svg" x="577" y="151.0" width="52" height="52"/>
-<text x="661" y="171" fill="#e7f8ff" font-size="24" font-weight="500">SignalDesk</text><text x="661" y="197" fill="#a9c8d5" font-size="14">Market intelligence</text>
-<rect x="520" y="238" width="592" height="94" rx="17" fill="url(#lexora)" stroke="#edf3df" stroke-opacity=".2"/>
+<text x="661" y="171" fill="#edf1f5" font-size="24" font-weight="500">SignalDesk</text><text x="661" y="197" fill="#bac5d0" font-size="14">Market intelligence</text>
+<rect x="520" y="238" width="592" height="94" rx="17" fill="url(#lexora)" stroke="#b6c7d8" stroke-opacity=".2"/>
 <image href="./assets/lexora.svg" x="577" y="259.0" width="52" height="52"/>
-<text x="661" y="279" fill="#edf3df" font-size="24" font-weight="500">Lexora</text><text x="661" y="305" fill="#b2c1aa" font-size="14">A little learning, every day</text>
-<rect x="520" y="346" width="592" height="94" rx="17" fill="url(#tap)" stroke="#e4fff4" stroke-opacity=".2"/>
+<text x="661" y="279" fill="#edf1f5" font-size="24" font-weight="500">Lexora</text><text x="661" y="305" fill="#bac5d0" font-size="14">A little learning, every day</text>
+<rect x="520" y="346" width="592" height="94" rx="17" fill="url(#tap)" stroke="#b6c7d8" stroke-opacity=".2"/>
 <rect x="574" y="364" width="58" height="58" rx="11" fill="#e8f6ed"/><image href="./assets/tapntrust.png" x="577" y="367" width="52" height="52"/>
-<text x="661" y="387" fill="#e4fff4" font-size="24" font-weight="500">TapNTrust</text><text x="661" y="413" fill="#a7d7c8" font-size="14">One tap. Better connections.</text>
-<rect x="520" y="454" width="592" height="94" rx="17" fill="url(#hazel)" stroke="#4a2f24" stroke-opacity=".2"/>
+<text x="661" y="387" fill="#edf1f5" font-size="24" font-weight="500">TapNTrust</text><text x="661" y="413" fill="#bac5d0" font-size="14">One tap. Better connections.</text>
+<rect x="520" y="454" width="592" height="94" rx="17" fill="url(#hazel)" stroke="#b6c7d8" stroke-opacity=".2"/>
 <image href="./assets/hazelnuttunes.png" x="574" y="472.0" width="58" height="58"/>
-<text x="661" y="495" fill="#4a2f24" font-size="24" font-weight="500">Hazelnuttunes Shop</text><text x="661" y="521" fill="#70513d" font-size="14">Your digital favourites</text>
+<text x="661" y="495" fill="#edf1f5" font-size="24" font-weight="500">Hazelnuttunes Shop</text><text x="661" y="521" fill="#bac5d0" font-size="14">Your digital favourites</text>
 </g></svg>
