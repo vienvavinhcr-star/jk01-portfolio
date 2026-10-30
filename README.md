@@ -24,7 +24,7 @@ Cards enter once on page load with a 560 ms fade/16 px rise, staggered by 90 ms.
 
 The star field and shooting stars use CSS transforms and opacity. Reduced-motion preferences stop the animation automatically. Background motion also pauses when the tab is hidden. All cards and controls support keyboard focus.
 
-The profile uses the user-supplied image in `assets/justin.jpg`.
+The profile uses the user-supplied image in `assets/justin-profile-v2.jpg`.
 
 ## Assets
 
@@ -32,7 +32,7 @@ The profile uses the user-supplied image in `assets/justin.jpg`.
 - `assets/tapntrust.png`: logo from the existing TapNTrust website
 - `assets/lexora.svg`: existing Lexora favicon
 - `assets/signaldesk.svg`: the V monogram used by Vestra Capital at the supplied SignalDesk URL
-- `favicon.svg`: JK favicon; `og-cover.svg`: social artwork source; `og-cover-v3.jpg`: current 1200 × 630 social preview with Justin’s avatar and all four project logos. `og-cover.jpg` is retained for old cached previews
+- `favicon.svg`: JK favicon; `og-cover.svg`: social artwork source; `og-cover-v4.jpg`: current 1200 × 630 social preview with Justin’s avatar and all four project logos. `og-cover.jpg` is retained for old cached previews
 
 ## Preview and hosting
 
@@ -57,3 +57,5 @@ The music card has no background panel, border or shadow, so it blends into the 
 Play/Pause uses a single SVG path updated with `setAttribute`, so it does not depend on the unsupported `hidden` property on SVG elements. Playback can also be paused while the initial request is loading.
 
 The music row is centered with a 360 px maximum width and inset mobile edges. The artwork, credits, compact waveform and 44 px playback target align on one row without extending to the shop-card edges.
+
+The updated portrait uses a 112 px circular frame on desktop and 104 px on mobile, with the existing gentle blue halo. The original portrait remains available for historical references.

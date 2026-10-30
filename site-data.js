@@ -6,7 +6,7 @@ window.JK_DATA = {
   person: {
     name: 'Justin',
     location: 'Melbourne, Australia',
-    photo: './assets/justin.jpg' // Local profile image.
+    photo: './assets/justin-profile-v2.jpg' // Local profile image.
   },
   // Add an already-trimmed, authorized audio excerpt to enable Play/Pause.
   music: { src: './assets/low-life-wake-up.m4a', waveform: './assets/low-life-waveform.json' },

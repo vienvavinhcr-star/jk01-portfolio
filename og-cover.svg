@@ -16,7 +16,7 @@
 <text x="88" y="88" fill="#e5edfc" font-size="25" font-weight="600" letter-spacing="-1">JK/01</text>
 <circle cx="255" cy="265" r="129" fill="url(#halo)"/>
 <circle cx="255" cy="265" r="86" fill="#afcbed"/>
-<image href="./assets/justin.jpg" x="172" y="182" width="166" height="166" clip-path="url(#portrait)"/>
+<image href="./assets/justin-profile-v2.jpg" x="172" y="182" width="166" height="166" clip-path="url(#portrait)"/>
 <text x="255" y="413" text-anchor="middle" fill="#f0f3fa" font-size="49" font-weight="600" letter-spacing="-1">Justin</text>
 <text x="88" y="563" fill="#a1b3cc" font-size="16" letter-spacing="1.5">JK01.RUNS-AT.DEV</text>
 <rect x="520" y="130" width="592" height="94" rx="17" fill="url(#signal)" stroke="#e7f8ff" stroke-opacity=".2"/>
