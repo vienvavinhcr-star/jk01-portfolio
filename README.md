@@ -32,7 +32,7 @@ The profile uses the user-supplied image in `assets/justin-profile-v2.jpg`.
 - `assets/tapntrust.png`: logo from the existing TapNTrust website
 - `assets/lexora.svg`: existing Lexora favicon
 - `assets/signaldesk.svg`: the V monogram used by Vestra Capital at the supplied SignalDesk URL
-- `favicon.svg`: JK favicon; `og-cover.svg`: social artwork source; `og-cover-v4.jpg`: current 1200 × 630 social preview with Justin’s avatar and all four project logos. `og-cover.jpg` is retained for old cached previews
+- `favicon.svg`: JK favicon; `og-cover.svg`: social artwork source; `og-cover-v5.jpg`: current 1200 × 630 social preview with Justin’s avatar and all four project logos. `og-cover.jpg` is retained for old cached previews
 
 ## Preview and hosting
 

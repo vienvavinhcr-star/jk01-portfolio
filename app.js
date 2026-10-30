@@ -47,7 +47,7 @@
       logoWrap.append(fallback, logo);
       const label = make('span', 'project-label');
       label.append(make('h2', '', project.name), make('span', 'project-subtitle', project.subtitle));
-      const arrow = make('span', 'card-arrow', '↗'); arrow.setAttribute('aria-hidden', 'true');
+
       const art = make('span', `card-art art-${project.id}`);
       art.setAttribute('aria-hidden', 'true');
       const graphics = {
@@ -57,7 +57,7 @@
         hazelnuttunes: '<svg viewBox="0 0 180 110" fill="none"><ellipse cx="130" cy="50" rx="57" ry="68" transform="rotate(35 130 50)"/><ellipse cx="130" cy="50" rx="47" ry="58" transform="rotate(35 130 50)"/><path d="m48 23 4 10 11 4-11 4-4 10-4-10-10-4 10-4z" fill="currentColor" stroke="none"/></svg>'
       };
       art.innerHTML = graphics[project.id] || '';
-      link.append(art, logoWrap, label, arrow); group.append(link);
+      link.append(art, logoWrap, label); group.append(link);
       if (Array.isArray(project.extraLinks)) {
         group.classList.add('has-related');
         const support = make('div', 'shop-support');
@@ -73,8 +73,8 @@
           if (extra.platform === 'instagram') {
             icon.innerHTML = '<svg viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="5"/><circle cx="10" cy="10" r="3.5"/><circle cx="15" cy="5" r="1" fill="currentColor" stroke="none"/></svg>';
           } else { icon.textContent = 'f'; }
-          const arrow = make('span', 'related-arrow', '↗'); arrow.setAttribute('aria-hidden', 'true');
-          secondary.append(icon, make('span', '', extra.label), arrow); related.append(secondary);
+
+          secondary.append(icon, make('span', '', extra.label)); related.append(secondary);
         });
         support.append(related); group.append(support);
       }

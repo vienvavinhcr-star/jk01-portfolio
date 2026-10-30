@@ -21,14 +21,14 @@
 <text x="88" y="563" fill="#a1b3cc" font-size="16" letter-spacing="1.5">JK01.RUNS-AT.DEV</text>
 <rect x="520" y="130" width="592" height="94" rx="17" fill="url(#signal)" stroke="#e7f8ff" stroke-opacity=".2"/>
 <image href="./assets/signaldesk.svg" x="577" y="151.0" width="52" height="52"/>
-<text x="661" y="171" fill="#e7f8ff" font-size="24" font-weight="500">SignalDesk</text><text x="661" y="197" fill="#a9c8d5" font-size="14">Market intelligence</text><path d="m1070 168 13 0 0 13m0-13-13 13" fill="none" stroke="#e7f8ff" stroke-opacity=".75" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="661" y="171" fill="#e7f8ff" font-size="24" font-weight="500">SignalDesk</text><text x="661" y="197" fill="#a9c8d5" font-size="14">Market intelligence</text>
 <rect x="520" y="238" width="592" height="94" rx="17" fill="url(#lexora)" stroke="#edf3df" stroke-opacity=".2"/>
 <image href="./assets/lexora.svg" x="577" y="259.0" width="52" height="52"/>
-<text x="661" y="279" fill="#edf3df" font-size="24" font-weight="500">Lexora</text><text x="661" y="305" fill="#b2c1aa" font-size="14">A little learning, every day</text><path d="m1070 276 13 0 0 13m0-13-13 13" fill="none" stroke="#edf3df" stroke-opacity=".75" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="661" y="279" fill="#edf3df" font-size="24" font-weight="500">Lexora</text><text x="661" y="305" fill="#b2c1aa" font-size="14">A little learning, every day</text>
 <rect x="520" y="346" width="592" height="94" rx="17" fill="url(#tap)" stroke="#e4fff4" stroke-opacity=".2"/>
 <rect x="574" y="364" width="58" height="58" rx="11" fill="#e8f6ed"/><image href="./assets/tapntrust.png" x="577" y="367" width="52" height="52"/>
-<text x="661" y="387" fill="#e4fff4" font-size="24" font-weight="500">TapNTrust</text><text x="661" y="413" fill="#a7d7c8" font-size="14">One tap. Better connections.</text><path d="m1070 384 13 0 0 13m0-13-13 13" fill="none" stroke="#e4fff4" stroke-opacity=".75" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="661" y="387" fill="#e4fff4" font-size="24" font-weight="500">TapNTrust</text><text x="661" y="413" fill="#a7d7c8" font-size="14">One tap. Better connections.</text>
 <rect x="520" y="454" width="592" height="94" rx="17" fill="url(#hazel)" stroke="#4a2f24" stroke-opacity=".2"/>
 <image href="./assets/hazelnuttunes.png" x="574" y="472.0" width="58" height="58"/>
-<text x="661" y="495" fill="#4a2f24" font-size="24" font-weight="500">Hazelnuttunes Shop</text><text x="661" y="521" fill="#70513d" font-size="14">Your digital favourites</text><path d="m1070 492 13 0 0 13m0-13-13 13" fill="none" stroke="#4a2f24" stroke-opacity=".75" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="661" y="495" fill="#4a2f24" font-size="24" font-weight="500">Hazelnuttunes Shop</text><text x="661" y="521" fill="#70513d" font-size="14">Your digital favourites</text>
 </g></svg>

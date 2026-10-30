@@ -46,8 +46,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .logo-fallback{font-size:22px;font-weight:600}.project-label{min-width:0;flex:1;position:relative;z-index:2}
 .project-label h2{font-size:16px;font-weight:500;line-height:1.5;letter-spacing:-.25px;margin:0}
 .project-subtitle{display:block;font-size:11px;font-weight:400;line-height:1.7;color:var(--sub);margin-top:2px}
-.card-arrow{position:relative;z-index:2;font-size:20px;font-weight:400;color:var(--sub);transition:transform .2s ease;margin-left:8px}
-.project-card:hover .card-arrow{transform:translate(2px,-2px)}
+
+
 .project-card:after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,#ffffff0d,transparent 40%,#ffffff03);z-index:1}
 .card-art{position:absolute;inset:0 0 0 auto;width:42%;pointer-events:none;z-index:0;transition:transform .5s ease,opacity .5s ease;mask-image:linear-gradient(90deg,transparent,#000 45%)}
 .card-art svg{height:100%;width:100%;display:block}
@@ -72,7 +72,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .theme-tapntrust .support-heading{color:#b5d7e5}
 .theme-tapntrust .related-link{background:#c4e4ff08;border-color:#b7d5ea30;color:#e1f2ff}
 .theme-tapntrust .related-link:hover{background:#c4e4ff18;border-color:#8bbdd9}
-.theme-tapntrust .related-arrow{color:#a8c6dc}
+
 .theme-tapntrust .facebook-mark{background:#bedcf0;color:#19344b}
 .instagram-mark{display:grid;place-items:center;width:17px;height:17px;color:#bedcf0;flex:none}
 .instagram-mark svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.5}
@@ -89,13 +89,13 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .related-link{display:flex;align-items:center;justify-content:center;gap:9px;min-height:43px;padding:9px 11px;border:1px solid #dac3a62b;border-radius:8px;background:#e8cbac08;color:#f0dcca;font-size:10px;line-height:1.5;transition:background .2s,border-color .2s}
 .related-link:hover{background:#e8cbac18;border-color:#d2ad8b}
 .facebook-mark{font-family:Arial,sans-serif;display:grid;place-items:center;width:17px;height:17px;border-radius:4px;background:#dec5b1;color:#2b2930;font-weight:700;font-size:16px;line-height:1;padding-top:3px;flex:none}
-.related-arrow{color:#baa08c;margin-left:auto;font-size:14px}
+
 .footer{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;margin-top:30px;color:#a0abc2;font-size:10px;line-height:1.6}
 
 .fallback-links{display:grid;gap:14px}.fallback-links a{display:block;padding:20px;border-radius:12px;background:#24344a}
 @media(min-width:1500px){.link-page{padding-top:9vh}}
-@media(max-width:600px){.link-page{width:calc(100% - 36px);padding-top:48px}.profile{margin-bottom:27px}.avatar{width:104px;height:104px;margin-bottom:17px}.profile h1{font-size:22px}.project-card{gap:14px;min-height:98px;padding:19px 17px;border-radius:15px}.project-logo{width:49px;height:49px;flex-basis:49px}.project-label h2{font-size:15px}.project-subtitle{font-size:10px}.card-arrow{margin-left:1px;font-size:18px}.related-links{gap:9px}.related-link{font-size:10px;gap:7px;padding-inline:10px}.shop-support{padding:13px 13px 14px}.support-heading{font-size:9px;letter-spacing:.035em}.footer{margin-top:24px}}
-@media(max-width:350px){.link-page{width:calc(100% - 28px)}.project-card{gap:11px;padding-inline:14px}.project-label h2{font-size:13px}.project-subtitle{font-size:9px}.project-logo{width:45px;height:45px;flex-basis:45px}.related-link{font-size:9px;padding-inline:8px;gap:6px}.related-arrow{font-size:12px}}
+@media(max-width:600px){.link-page{width:calc(100% - 36px);padding-top:48px}.profile{margin-bottom:27px}.avatar{width:104px;height:104px;margin-bottom:17px}.profile h1{font-size:22px}.project-card{gap:14px;min-height:98px;padding:19px 17px;border-radius:15px}.project-logo{width:49px;height:49px;flex-basis:49px}.project-label h2{font-size:15px}.project-subtitle{font-size:10px}.related-links{gap:9px}.related-link{font-size:10px;gap:7px;padding-inline:10px}.shop-support{padding:13px 13px 14px}.support-heading{font-size:9px;letter-spacing:.035em}.footer{margin-top:24px}}
+@media(max-width:350px){.link-page{width:calc(100% - 28px)}.project-card{gap:11px;padding-inline:14px}.project-label h2{font-size:13px}.project-subtitle{font-size:9px}.project-logo{width:45px;height:45px;flex-basis:45px}.related-link{font-size:9px;padding-inline:8px;gap:6px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.meteor{display:none}}
 
 /* Small profile actions, with a full touch target. */
