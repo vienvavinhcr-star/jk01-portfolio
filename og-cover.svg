@@ -5,7 +5,7 @@
 <linearGradient id="signal"><stop stop-color="#0d202b"/><stop offset="1" stop-color="#1a4853"/></linearGradient>
 <linearGradient id="lexora"><stop stop-color="#23372f"/><stop offset="1" stop-color="#32443a"/></linearGradient>
 <linearGradient id="tap"><stop stop-color="#162c53"/><stop offset="1" stop-color="#16465a"/></linearGradient>
-<linearGradient id="hazel"><stop stop-color="#ddb08e"/><stop offset="1" stop-color="#e7c59c"/></linearGradient>
+<linearGradient id="hazel"><stop stop-color="#c29b7b"/><stop offset="1" stop-color="#d0ad88"/></linearGradient>
 <clipPath id="portrait"><circle cx="255" cy="265" r="83"/></clipPath>
 <clipPath id="hazel-logo"><circle cx="602" cy="507" r="29"/></clipPath>
 </defs>

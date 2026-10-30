@@ -77,12 +77,12 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 .instagram-mark{display:grid;place-items:center;width:17px;height:17px;color:#bedcf0;flex:none}
 .instagram-mark svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.5}
 .theme-hazelnuttunes{border:1px solid #bc967875;border-radius:18px;overflow:hidden;box-shadow:0 12px 35px #08091160;background:#2b201d}
-.theme-hazelnuttunes .project-card{--surface:radial-gradient(ellipse at 95% 0%,#f3d9af,transparent 70%),linear-gradient(115deg,#ddb08e,#e7c59c);--edge:transparent;--color:#4a2f24;--sub:#70513d;--shadow:transparent;border:0;border-radius:17px 17px 0 0;box-shadow:none}
+.theme-hazelnuttunes .project-card{--surface:radial-gradient(ellipse at 95% 0%,#d8b68f4d,transparent 70%),linear-gradient(115deg,#c29b7b,#d0ad88);--edge:transparent;--color:#4a2f24;--sub:#70513d;--shadow:transparent;border:0;border-radius:17px 17px 0 0;box-shadow:none}
 .theme-hazelnuttunes .project-card:hover{transform:none;box-shadow:none}
 .theme-hazelnuttunes .project-logo,.theme-hazelnuttunes .project-logo img{border-radius:50%}
 .theme-hazelnuttunes .project-logo img{inset:0;width:100%;height:100%;background:transparent}
-.art-hazelnuttunes{color:#9c6b36;opacity:.22;width:39%;right:13px}
-.art-hazelnuttunes svg{stroke:currentColor;stroke-width:1.3}
+.art-hazelnuttunes{color:#674522;opacity:.24;width:46%;right:-6px}
+.art-hazelnuttunes svg{stroke:currentColor;stroke-width:1.05}
 .shop-support{padding:14px 17px 16px;background:linear-gradient(110deg,#30231e,#251f1f);border-top:1px solid #fde3c01c}
 .support-heading{margin:0 0 11px;color:#d2b79c;font-size:9px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;line-height:1.5}
 .related-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}

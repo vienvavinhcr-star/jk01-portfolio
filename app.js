@@ -54,7 +54,7 @@
         signaldesk: '<svg viewBox="0 0 200 100" fill="none"><path d="M0 80 23 66 39 74 61 48 78 54 100 24 122 37 146 12 169 29 200 4" stroke="currentColor" stroke-width="1.5"/><path d="M0 98H200M0 74H200M0 50H200M0 26H200M25 0V100M75 0V100M125 0V100M175 0V100" stroke="currentColor" stroke-opacity=".15" stroke-width=".7"/></svg>',
         lexora: '<span>æ</span>',
         tapntrust: '<svg viewBox="0 0 160 100" fill="none"><circle cx="105" cy="55" r="25"/><circle cx="105" cy="55" r="44"/><circle cx="105" cy="55" r="64"/><circle cx="105" cy="55" r="84"/></svg>',
-        hazelnuttunes: '<svg viewBox="0 0 180 110" fill="none"><ellipse cx="130" cy="50" rx="57" ry="68" transform="rotate(35 130 50)"/><ellipse cx="130" cy="50" rx="47" ry="58" transform="rotate(35 130 50)"/><path d="m48 23 4 10 11 4-11 4-4 10-4-10-10-4 10-4z" fill="currentColor" stroke="none"/></svg>'
+        hazelnuttunes: '<svg viewBox="0 0 220 110" fill="none"><path d="M4 106C42 102 44 28 86 40s57 64 92 28 37-50 56-37M-2 96C34 92 43 16 88 29s58 65 93 28 37-48 56-34M-8 86C29 81 41 5 90 18s58 66 94 28 38-48 57-34M-14 76C24 70 40-7 92 7s59 66 95 28 39-46 57-34"/><path d="m150 17 2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5zm-48 60 1.5 4.5 4.5 1.5-4.5 1.5-1.5 4.5-1.5-4.5-4.5-1.5 4.5-1.5z" fill="currentColor" stroke="none"/><circle cx="193" cy="88" r="1.5" fill="currentColor" stroke="none"/></svg>'
       };
       art.innerHTML = graphics[project.id] || '';
       link.append(art, logoWrap, label); group.append(link);
