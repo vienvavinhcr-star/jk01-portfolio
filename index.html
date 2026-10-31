@@ -24,16 +24,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20261031-tone-1">
+  <link rel="stylesheet" href="./styles.css?v=20261101-theme-1">
   <script defer src="./site-data.js?v=20261031-avatar-1"></script>
-  <script defer src="./app.js?v=20261031-hazel-1"></script>
+  <script defer src="./app.js?v=20261101-theme-1"></script>
   <title>JK/01 — Justin</title>
 </head>
 <body>
   <a class="skip-link" href="#links">Skip to links</a>
+  <label class="theme-control" hidden title="Drag to switch light and dark themes">
+    <input class="theme-slider" id="themeSlider" type="range" min="0" max="1" step="1" value="0" aria-label="Color theme" aria-valuetext="Dark theme">
+    <span class="theme-track" aria-hidden="true"><span class="theme-thumb"></span>
+      <svg class="switch-moon" viewBox="0 0 24 24"><path d="M19.4 14.4A8 8 0 0 1 9.6 4.6a8 8 0 1 0 9.8 9.8Z"/></svg>
+      <svg class="switch-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </span>
+  </label>
   <div class="sky" aria-hidden="true">
-    <div class="sky-glow"></div><div class="stars" id="stars"></div>
-    <div class="meteor meteor-one"></div><div class="meteor meteor-two"></div><div class="meteor meteor-three"></div>
+    <div class="day-sky"></div><div class="sky-glow"></div>
+    <div class="night-details"><div class="stars" id="stars"></div>
+      <div class="meteor meteor-one"></div><div class="meteor meteor-two"></div><div class="meteor meteor-three"></div>
+    </div>
+    <div class="celestial-stage"><div class="celestial-orbit"><span class="celestial-moon"></span><span class="celestial-sun"></span></div></div>
     <div class="horizon"></div>
   </div>
   <main class="link-page">

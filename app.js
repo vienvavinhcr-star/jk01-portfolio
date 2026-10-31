@@ -188,6 +188,20 @@
     musicToggle.setAttribute('aria-describedby', 'musicStatus');
   }
 
+  // Explicit dark default; a native range supports dragging, touch and arrow keys.
+  const themeSlider = document.querySelector('#themeSlider');
+  const themeControl = themeSlider.closest('.theme-control');
+  themeSlider.value = '0';
+  document.documentElement.dataset.theme = 'dark';
+  themeControl.hidden = false;
+  themeSlider.addEventListener('input', () => {
+    const light = themeSlider.value === '1';
+    document.documentElement.dataset.theme = light ? 'light' : 'dark';
+    themeControl.style.setProperty('--theme-position', light ? '1' : '0');
+    themeSlider.setAttribute('aria-valuetext', light ? 'Light theme' : 'Dark theme');
+    document.querySelector('meta[name="theme-color"]').content = light ? '#e9f1f3' : '#050a15';
+  });
+
   // Share the canonical address, without query strings used for deployment checks.
   const shareButton = document.querySelector('#shareButton');
   const shareStatus = document.querySelector('#shareStatus');

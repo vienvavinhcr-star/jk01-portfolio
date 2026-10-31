@@ -63,3 +63,7 @@ The updated portrait uses a 112 px circular frame on desktop and 104 px on mobil
 Hazelnuttunes uses subdued caramel with flowing sound-wave ribbons and small stars, distinct from TapNTrust’s concentric contactless rings.
 
 All four card gradients use matched relative luminance (approximately 0.033 to 0.052), a common light title/subtitle palette, and matching border intensity. The hues remain teal, moss, blue and warm brown. TapNTrust and Hazelnuttunes support panels are also matched at lower luminance. Original logos retain their brand colors.
+
+## Day / night theme
+
+A fixed native range slider at the top left supports drag, touch and keyboard arrows. Every new page load starts dark, regardless of system settings or previous use. A 1.65-second quarter-circle orbit carries the moon away while the sun follows into its position; the sky, stars and card surfaces fade between night and daylight. The light theme uses luminance-matched pastel card gradients and dark readable text. Reduced-motion preferences remove the orbit and fades. No theme preference is persisted.
