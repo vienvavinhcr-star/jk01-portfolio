@@ -143,14 +143,14 @@ a:focus-visible,button:focus-visible{outline:3px solid #d8e4ff;outline-offset:5p
 @media(max-width:350px){.profile-music{width:calc(100% - 24px);grid-template-columns:36px minmax(0,1fr) 50px 44px;gap:7px}.music-cover{width:36px;height:36px}.music-waveform{width:50px;gap:.4px}.music-title{font-size:11px}.music-artist{font-size:9px}}
 
 /* Native draggable, keyboard-accessible theme slider. Every page starts dark. */
-.theme-control{position:fixed;top:20px;left:20px;width:88px;height:44px;z-index:20;--theme-position:0}
+.theme-control{position:absolute;top:16px;left:16px;width:72px;height:44px;z-index:20;--theme-position:0}
 .theme-slider{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:2}
-.theme-track{position:absolute;inset:0;border:1px solid #9db6d83d;border-radius:24px;background:#112135c9;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 4px 16px #00000015;transition:background 1.2s,border-color 1.2s}
-.theme-thumb{position:absolute;left:6px;top:6px;width:30px;height:30px;border-radius:50%;background:#bdd3e7;box-shadow:0 2px 6px #0002;transform:translateX(calc(var(--theme-position)*44px));transition:transform .32s cubic-bezier(.22,1,.36,1),background 1s}
-.theme-track svg{position:absolute;top:12px;width:18px;height:18px;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke 1s}
-.switch-moon{left:12px;stroke:#31475d}.switch-sun{right:12px;stroke:#91a9bf}
+.theme-track{position:absolute;inset:6px 0;border:1px solid #9db6d83d;border-radius:18px;background:#112135c9;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 4px 16px #00000015;transition:background 1.2s,border-color 1.2s}
+.theme-thumb{position:absolute;left:4px;top:3px;width:24px;height:24px;border-radius:50%;background:#bdd3e7;box-shadow:0 2px 6px #0002;transform:translateX(calc(var(--theme-position)*38px));transition:transform .32s cubic-bezier(.22,1,.36,1),background 1s}
+.theme-track svg{position:absolute;top:8px;width:14px;height:14px;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke 1s}
+.switch-moon{left:9px;stroke:#31475d}.switch-sun{right:9px;stroke:#91a9bf}
 .theme-slider:focus-visible+.theme-track{outline:3px solid #9fc9ee;outline-offset:4px}
-@media(max-width:600px){.theme-control{top:14px;left:14px}}
+@media(max-width:600px){.theme-control{top:10px;left:12px}}
 
 /* The sun follows the moon on the same quarter-circle orbit. */
 .celestial-stage{--celestial-size:clamp(30px,4vw,56px);--orbit-radius:clamp(56px,8vw,110px);position:absolute;right:clamp(28px,10vw,180px);top:clamp(48px,9vh,95px);width:var(--celestial-size);height:var(--celestial-size);z-index:2}
